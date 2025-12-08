@@ -1,0 +1,124 @@
+/* Dual Cards component (BEM, mobile-first) */
+:root{
+  --dual-green:#DDF0C4;
+  --dual-green-strong:#b6ff8a;
+  --dual-dark:#0b0b0e;
+  --dual-dark-2:#101114;
+  --dual-text:#ffffff;
+  --dual-muted:#a5a7ad;
+  --dual-border:#202128;
+}
+
+.dual-cards{}
+
+.dual-cards__item{
+  display:flex;
+  gap:16px;
+  border-radius:24px;
+  padding:18px;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Evaluation (left) */
+.dual-cards__item--evaluation{
+  background: var(--dual-green);
+  color:#0a0a0a;
+}
+.dual-cards__item--evaluation .dual-cards__media{
+  width:84px; height:84px; border-radius:50%;
+  flex:0 0 84px;
+  background:
+    radial-gradient(closest-side, #c5ff95, #8bf75f),
+    linear-gradient(180deg, #c7f2a8, #c7f2a8);
+  box-shadow: 0 6px 22px rgba(0,0,0,.12);
+  align-self:flex-start;
+}
+
+.dual-cards__content{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.dual-cards__title{ color:#0a0a0a; }
+.dual-cards__text{ color:#1a1b20; }
+
+.dual-cards__list{
+  counter-reset: step;
+  display:grid;
+  gap:8px;
+  margin: 4px 0 6px;
+  padding-left: 0;
+}
+.dual-cards__list-item{
+  list-style:none;
+  position:relative;
+  padding-left:28px;
+}
+.dual-cards__list-item::before{
+  counter-increment: step;
+  content: counter(step);
+  position:absolute;
+  left:0; top:0;
+  width:20px; height:20px;
+  border-radius:50%;
+  background:#0a0a0a;
+  color:#fff;
+  font:700 12px/20px "Satoshi", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  text-align:center;
+}
+
+.dual-cards__cta{ margin-top:4px; }
+
+/* Promo (right) */
+.dual-cards__item--promo{
+  background: radial-gradient(600px 220px at 20% 10%, rgba(182,255,138,.20), rgba(182,255,138,0) 60%),
+              linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+              var(--dual-dark-2);
+  border:1px solid var(--dual-border);
+  color: var(--dual-text);
+  align-items:center;
+  justify-content:space-between;
+}
+.dual-cards__item--promo .dual-cards__content{
+  max-width: 60%;
+}
+.dual-cards__item--promo .dual-cards__title{ color:#fff; }
+.dual-cards__item--promo .dual-cards__text{ color:#d6d9df; }
+.dual-cards__item--promo .dual-cards__media{
+  width:160px; height:160px; border-radius:50%;
+  flex:0 0 160px;
+  background:
+    radial-gradient(closest-side, rgba(182,255,138,.35), rgba(182,255,138,0) 70%),
+    url('../img/free-challenge.jpg') center/cover no-repeat;
+  opacity:.9;
+}
+.dual-cards__item--promo::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(90deg, rgba(0,0,0,.25), rgba(0,0,0,0));
+  pointer-events:none;
+}
+
+/* Buttons (uses global system) */
+.btn.btn--primary{
+  background:#b6ff8a; color:#000; border-radius:8px; padding:12px 28px;
+}
+
+/* Responsive */
+@media (max-width: 991.98px){
+  .dual-cards__item--promo{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .dual-cards__item--promo .dual-cards__content{ max-width:100%; }
+  .dual-cards__item--promo .dual-cards__media{ align-self:flex-end; margin-top:8px; }
+}
+
+@media (max-width: 767.98px){
+  .dual-cards__item{ padding:16px; }
+  .dual-cards__item--promo .dual-cards__media{ width:140px; height:140px; }
+}
+

@@ -1,0 +1,64 @@
+/* Reusable button system (BEM) */
+:root {
+    --btn-radius: 10px;
+    --btn-padding-y: 12px;
+    --btn-padding-x: 20px;
+    --btn-font-weight: 700;
+    --btn-transition: .2s ease-in-out;
+
+    --jx-bg: #0b0b0e;
+    --jx-bg-2: #101114;
+    --jx-text: #ffffff;
+    --jx-muted: #a5a7ad;
+    --jx-accent: #b6ff8a;
+    --jx-border: #202128;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    border-radius: var(--btn-radius);
+    font-weight: var(--btn-font-weight);
+    line-height: 1.2;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform var(--btn-transition), background-color var(--btn-transition), color var(--btn-transition), border-color var(--btn-transition);
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn--primary {
+    background-color: var(--jx-accent);
+    color: #0a0a0a;
+    border-color: var(--jx-accent);
+}
+.btn--primary:hover { filter: brightness(0.95); }
+.btn--primary:active { filter: brightness(0.9); }
+
+.btn--secondary {
+    background-color: var(--jx-bg-2);
+    color: var(--jx-text);
+    border-color: var(--jx-border);
+}
+.btn--secondary:hover { border-color: #2a2c33; }
+.btn--secondary:active { background-color: #0f1013; }
+
+.btn--outline {
+    background-color: transparent;
+    color: var(--jx-text);
+    border-color: #ffffff;
+}
+.btn--outline:hover { background-color: rgba(255,255,255,0.08); }
+.btn--outline:active { background-color: rgba(255,255,255,0.12); }
+
+/* Size modifiers if needed */
+.btn--sm { padding: 10px 16px; font-size: 0.9rem; }
+.btn--lg { padding: 14px 24px; font-size: 1.05rem; }
+

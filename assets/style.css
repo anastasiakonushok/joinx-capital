@@ -33,9 +33,21 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+  font-family: "Satoshi", sans-serif !important;
+}
 body {
 	line-height: 1;
-  font-family: var(--bs-font-sans-serif);
+  font-family: inherit !important;
+}
+
+/* Ensure inheritance across common elements and Bootstrap components */
+h1, h2, h3, h4, h5, h6,
+p, span, small, a, li, blockquote, figcaption,
+button, input, textarea, select, label,
+th, td,
+.btn, .nav-link {
+  font-family: inherit !important;
 }
 ol, ul {
 	list-style: none;
@@ -155,8 +167,9 @@ table {
 }
 
 .site-header {
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(10px);
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
 }
 
 .nav-link {
@@ -211,7 +224,7 @@ table {
 }
 
 body {
-  background: var(--jx-bg);
+  background: #fff;
   color: var(--jx-text);
 }
 
@@ -233,13 +246,18 @@ body {
     var(--jx-bg) url('../img/noise.png');
   background-blend-mode: screen, screen, normal, normal;
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
-  font-size: 48px;
-  line-height: 1.1;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  text-align: center;
   color: var(--jx-text);
-  font-weight: 800;
 }
 
 .hero-subtitle {
@@ -247,10 +265,7 @@ body {
   font-size: 18px;
 }
 
-.payments img {
-  opacity: .8;
-  filter: grayscale(1);
-}
+
 
 .btn-green {
   background: var(--jx-accent);

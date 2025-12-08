@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/typography.css">
+    <link rel="stylesheet" href="./assets/css/buttons.css">
+    <link rel="stylesheet" href="./assets/css/hero.css">
+    <link rel="stylesheet" href="./assets/css/dual-cards.css">
+    <link rel="stylesheet" href="./assets/css/pricing.css">
+    <link rel="stylesheet" href="./assets/css/funded.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
     <title>Joinx capital</title>
 </head>
 
@@ -60,34 +67,30 @@
     </header>
 
     <main>
-        <section class="hero-section d-flex align-items-center">
-            <div class="container-1440 text-center">
-
-                <!-- Title -->
-                <h1 class="hero-title mb-3">
-                    Our Capital. Your Growth.
-                </h1>
-
-                <!-- Subtitle -->
-                <p class="hero-subtitle mb-4">
-                    Get up to $300,000 in Trading Power for Real-World and Crypto Markets. <br>
-                    Keep up to 80% of simulated profits with fast payouts.
-                </p>
-
-                <!-- Buttons -->
-                <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
-                    <a href="#" class="btn btn-green px-4 py-2">SELECT EVALUATION</a>
-                    <a href="#" class="btn btn-outline-light px-4 py-2">FREE CHALLENGE</a>
+        <section class="hero" style="background-image: url('./img/bg-hero.png');">
+            <div class="hero__inner container-1440">
+                <div class="hero__content">
+                    <h1 class="hero__title">Our Capital. Your Growth.</h1>
+                    <p class="hero__subtitle">
+                        Get up to $300,000 in Trading Power for Real‑World and Crypto Markets.
+                        <br>Keep up to 80% of simulated profits with fast payouts.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#pricing" class="btn btn--primary">Select Evaluation</a>
+                        <a href="#" class="btn btn--outline">Free Challenge</a>
+                    </div>
+                    
                 </div>
-
-                <!-- Payments block -->
-                <div class="payments d-flex justify-content-center align-items-center gap-4 flex-wrap">
-                    <img src="skrill.svg" alt="Skrill" height="26">
-                    <img src="paypal.svg" alt="PayPal" height="26">
-                    <img src="cards.svg" alt="Cards" height="26">
-                    <img src="pci.svg" alt="PCI" height="26">
+                <div class="hero__bottom">
+                    <p>JoinX delivers top-tier trading conditions, including a 100% free challenge, helping traders
+                        learn and improve their performance - across forex, crypto, and other markets.</p>
+                    <div class="hero__payments">
+                        <img src="./img/skrill-logo.svg" alt="Skrill" height="26">
+                        <img src="./img/paypal-logo.svg" alt="PayPal" height="26">
+                        <img src="./img/master-logo.svg" alt="Mastercard" height="26">
+                        <img src="./img/visa-logo.svg" alt="Visa" height="26">
+                    </div>
                 </div>
-
             </div>
         </section>
 
@@ -95,48 +98,75 @@
         <section class="section pt-5 pb-4 bg-white">
             <div class="container-1440">
                 <div class="row align-items-center justify-content-between g-4">
-                    <div class="col-lg-5">
-                        <h2 class="section-title mb-2">Trade with a reliable partner</h2>
-                        <p class="section-subtitle text-muted">Thousands of traders choose us for fair challenges, fast payouts and transparent rules.</p>
+                    <div class="text-center">
+                        <h2 class="section-title mb-2">Skill Meets Prop Trading.</h2>
+                        <p class="section-subtitle text-muted">JoinX offers paid and free trading challenges designed to
+                            identify skilled traders. Follow the rules, hit the targets, and gain access to up to
+                            $300,000 in trading power while keeping up to 80% of simulated profits. Top performers may
+                            be selected for a hired position proposal - all with zero risk to personal capital. 
+                            If you have the skill but lack the resources or capital, prove your ability by passing our
+                            Trading Challenge and earn a funded account within days.</p>
                     </div>
-                    <div class="col-lg-7">
-                        <div class="avatars d-flex flex-wrap align-items-center gap-3 justify-content-lg-end">
-                            <div class="avatar"></div>
-                            <div class="avatar"></div>
-                            <div class="avatar"></div>
-                            <div class="avatar"></div>
-                            <div class="avatar"></div>
-                            <div class="avatar"></div>
-                            <div class="avatar"></div>
-                            <div class="avatar"></div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- Dual cards: Free Challenge / Evaluation -->
-        <section class="section py-5">
+        <section class="funded py-5">
             <div class="container-1440">
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <div class="promo-card promo-card--dark h-100">
-                            <div>
-                                <h3 class="promo-title mb-2">Free Challenge</h3>
-                                <p class="promo-text mb-4">Practice in a risk‑free environment. Prove your edge and get fast‑tracked to funded status.</p>
+                <div class="row g-4 funded__row">
+
+                    <!-- LEFT COLUMN -->
+                    <div class="col-lg-6 funded__col funded__col--left">
+                        <!-- Top-left: Evaluation -->
+                        <article class="funded__card funded__card--evaluation">
+                            <div class="funded__media" aria-hidden="true"></div>
+                            <div class="funded__content">
+                                <h2 class="funded__title heading-2">Can You Qualify For A Funded Account?</h2>
+                                <p class="funded__text body-text">
+                                    Choose your evaluation size and follow the rules. Complete the steps to unlock your
+                                    simulated funded account.
+                                </p>
+                                <ol class="funded__list">
+                                    <li class="funded__list-item body-text">Select an evaluation plan that fits your
+                                        style.</li>
+                                    <li class="funded__list-item body-text">Trade according to drawdown and profit
+                                        targets.</li>
+                                    <li class="funded__list-item body-text">Pass the evaluation and start scaling.</li>
+                                </ol>
+                                <a href="#pricing" class="btn btn--secondary funded__cta">Select Evaluation</a>
                             </div>
-                            <a href="#" class="btn btn-light">Start Free</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="promo-card h-100">
-                            <div>
-                                <h3 class="promo-title mb-2">Evaluation Accounts</h3>
-                                <p class="promo-text mb-4">Choose your initial balance and ruleset. Scale up to $300k in simulated capital.</p>
+                        </article>
+
+                        <!-- Bottom-left: Info -->
+                        <article class="funded__card funded__card--info">
+                            <div class="funded__content">
+                                <h2 class="funded__title heading-2">Become a Funded Trader</h2>
+                                <p class="funded__subtitle body-text">Trade with simulated capital and keep a share of
+                                    profits.</p>
+                                <div class="funded__text body-text">
+                                    <strong>Our Evaluation Process</strong><br>
+                                    Prove consistency and risk management. Hit the targets within the limits and unlock
+                                    your simulated funded account with fast payouts and scaling options.
+                                </div>
                             </div>
-                            <a href="#" class="btn btn-green">Select Plan</a>
-                        </div>
+                        </article>
                     </div>
+
+                    <!-- RIGHT COLUMN -->
+                    <div class="col-lg-6 funded__col funded__col--right">
+                        <article class="funded__card funded__card--challenge">
+                            <div class="funded__content">
+                                <h2 class="funded__title heading-2">Free Challenge</h2>
+                                <p class="funded__text body-text">Practice with realistic rules in a risk‑free
+                                    environment. Test your edge before committing.</p>
+                                <a href="#" class="btn btn--primary funded__cta">Claim Now</a>
+                            </div>
+                            <div class="funded__media" aria-hidden="true"></div>
+                        </article>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -187,64 +217,167 @@
         </section>
 
         <!-- Pricing -->
-        <section class="section py-5">
+        <section class="pricing py-5" id="pricing">
             <div class="container-1440">
-                <h2 class="section-title text-center mb-4">Choose Your Trading Plan</h2>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="price-card">
-                            <div class="price-head">
-                                <div class="price-amount">$10k</div>
-                                <div class="price-note">Evaluation</div>
+                <h2 class="pricing__title text-center mb-4">Choose Account Size</h2>
+
+                <!-- Tabs -->
+                <ul class="pricing__tabs nav nav-tabs justify-content-center mb-4" id="pricingTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="pricing__tab-btn nav-link active" id="tab-btn-1" data-bs-toggle="tab"
+                            data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1"
+                            aria-selected="true">1 Step</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="pricing__tab-btn nav-link" id="tab-btn-2" data-bs-toggle="tab"
+                            data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2"
+                            aria-selected="false">2 Steps</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="pricing__tab-btn nav-link" id="tab-btn-3" data-bs-toggle="tab"
+                            data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3"
+                            aria-selected="false">Special Offers</button>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- 1 Step -->
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-btn-1">
+                        <div class="swiper pricing__slider" data-slider="pricing">
+                            <div class="swiper-wrapper">
+                                <div class="pricing__slide swiper-slide">
+                                    <article class="pricing__card">
+                                        <header class="pricing__card-head">
+                                            <h3 class="pricing__card-title">Account $10k</h3>
+                                            <div class="pricing__price">$99</div>
+                                        </header>
+                                        <ul class="pricing__features">
+                                            <li class="pricing__feature">Step 1 Profit Target — 5%</li>
+                                            <li class="pricing__feature">Max Drawdown — 5%</li>
+                                            <li class="pricing__feature">Reward Split — 80%</li>
+                                        </ul>
+                                        <a href="#" class="btn btn--primary w-100">See details</a>
+                                    </article>
+                                </div>
+                                <div class="pricing__slide swiper-slide">
+                                    <article class="pricing__card">
+                                        <header class="pricing__card-head">
+                                            <h3 class="pricing__card-title">Account $50k</h3>
+                                            <div class="pricing__price">$299</div>
+                                        </header>
+                                        <ul class="pricing__features">
+                                            <li class="pricing__feature">Step 1 Profit Target — 5%</li>
+                                            <li class="pricing__feature">Max Drawdown — 6%</li>
+                                            <li class="pricing__feature">Reward Split — 80%</li>
+                                        </ul>
+                                        <a href="#" class="btn btn--primary w-100">See details</a>
+                                    </article>
+                                </div>
+                                <div class="pricing__slide swiper-slide">
+                                    <article class="pricing__card">
+                                        <header class="pricing__card-head">
+                                            <h3 class="pricing__card-title">Account $100k</h3>
+                                            <div class="pricing__price">$999</div>
+                                        </header>
+                                        <ul class="pricing__features">
+                                            <li class="pricing__feature">Step 1 Profit Target — 5%</li>
+                                            <li class="pricing__feature">Max Drawdown — 8%</li>
+                                            <li class="pricing__feature">Reward Split — 80%</li>
+                                        </ul>
+                                        <a href="#" class="btn btn--primary w-100">See details</a>
+                                    </article>
+                                </div>
                             </div>
-                            <ul class="price-list">
-                                <li>Max drawdown 5%</li>
-                                <li>Profit split up to 80%</li>
-                                <li>Payouts bi‑weekly</li>
-                            </ul>
-                            <a href="#" class="btn btn-green w-100">Select</a>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="price-card">
-                            <div class="price-head">
-                                <div class="price-amount">$25k</div>
-                                <div class="price-note">Evaluation</div>
+
+                    <!-- 2 Steps -->
+                    <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-btn-2">
+                        <div class="swiper pricing__slider" data-slider="pricing">
+                            <div class="swiper-wrapper">
+                                <div class="pricing__slide swiper-slide">
+                                    <article class="pricing__card">
+                                        <header class="pricing__card-head">
+                                            <h3 class="pricing__card-title">Account $25k</h3>
+                                            <div class="pricing__price">$169</div>
+                                        </header>
+                                        <ul class="pricing__features">
+                                            <li class="pricing__feature">Step 2 Profit Target — 8%</li>
+                                            <li class="pricing__feature">Max Drawdown — 6%</li>
+                                            <li class="pricing__feature">Reward Split — 80%</li>
+                                        </ul>
+                                        <a href="#" class="btn btn--primary w-100">See details</a>
+                                    </article>
+                                </div>
+                                <div class="pricing__slide swiper-slide">
+                                    <article class="pricing__card">
+                                        <header class="pricing__card-head">
+                                            <h3 class="pricing__card-title">Account $50k</h3>
+                                            <div class="pricing__price">$329</div>
+                                        </header>
+                                        <ul class="pricing__features">
+                                            <li class="pricing__feature">Step 2 Profit Target — 8%</li>
+                                            <li class="pricing__feature">Max Drawdown — 6%</li>
+                                            <li class="pricing__feature">Reward Split — 80%</li>
+                                        </ul>
+                                        <a href="#" class="btn btn--primary w-100">See details</a>
+                                    </article>
+                                </div>
+                                <div class="pricing__slide swiper-slide">
+                                    <article class="pricing__card">
+                                        <header class="pricing__card-head">
+                                            <h3 class="pricing__card-title">Account $100k</h3>
+                                            <div class="pricing__price">$599</div>
+                                        </header>
+                                        <ul class="pricing__features">
+                                            <li class="pricing__feature">Step 2 Profit Target — 8%</li>
+                                            <li class="pricing__feature">Max Drawdown — 8%</li>
+                                            <li class="pricing__feature">Reward Split — 80%</li>
+                                        </ul>
+                                        <a href="#" class="btn btn--primary w-100">See details</a>
+                                    </article>
+                                </div>
                             </div>
-                            <ul class="price-list">
-                                <li>Max drawdown 6%</li>
-                                <li>Profit split up to 80%</li>
-                                <li>Payouts bi‑weekly</li>
-                            </ul>
-                            <a href="#" class="btn btn-green w-100">Select</a>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="price-card">
-                            <div class="price-head">
-                                <div class="price-amount">$50k</div>
-                                <div class="price-note">Evaluation</div>
+
+                    <!-- Special Offers -->
+                    <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-btn-3">
+                        <div class="swiper pricing__slider" data-slider="pricing">
+                            <div class="swiper-wrapper">
+                                <div class="pricing__slide swiper-slide">
+                                    <article class="pricing__card">
+                                        <header class="pricing__card-head">
+                                            <h3 class="pricing__card-title">Free Challenge</h3>
+                                            <div class="pricing__price">FREE</div>
+                                        </header>
+                                        <ul class="pricing__features">
+                                            <li class="pricing__feature">Risk‑free practice</li>
+                                            <li class="pricing__feature">Realistic rules</li>
+                                            <li class="pricing__feature">Get fast‑tracked</li>
+                                        </ul>
+                                        <a href="#" class="btn btn--outline w-100">Start now</a>
+                                    </article>
+                                </div>
+                                <div class="pricing__slide swiper-slide">
+                                    <article class="pricing__card">
+                                        <header class="pricing__card-head">
+                                            <h3 class="pricing__card-title">Best Offer</h3>
+                                            <div class="pricing__price">$299</div>
+                                        </header>
+                                        <ul class="pricing__features">
+                                            <li class="pricing__feature">Bonus payout speed</li>
+                                            <li class="pricing__feature">Priority support</li>
+                                            <li class="pricing__feature">Scaling enabled</li>
+                                        </ul>
+                                        <a href="#" class="btn btn--secondary w-100">See details</a>
+                                    </article>
+                                </div>
                             </div>
-                            <ul class="price-list">
-                                <li>Max drawdown 6%</li>
-                                <li>Profit split up to 80%</li>
-                                <li>Payouts bi‑weekly</li>
-                            </ul>
-                            <a href="#" class="btn btn-green w-100">Select</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="price-card">
-                            <div class="price-head">
-                                <div class="price-amount">$100k</div>
-                                <div class="price-note">Evaluation</div>
-                            </div>
-                            <ul class="price-list">
-                                <li>Max drawdown 8%</li>
-                                <li>Profit split up to 80%</li>
-                                <li>Payouts bi‑weekly</li>
-                            </ul>
-                            <a href="#" class="btn btn-green w-100">Select</a>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -260,11 +393,13 @@
                         <div class="accordion" id="faqAccordion">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="q1">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
                                         How do payouts work?
                                     </button>
                                 </h2>
-                                <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+                                <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1"
+                                    data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
                                         Payouts are available bi‑weekly with up to 80% of simulated profits.
                                     </div>
@@ -272,11 +407,13 @@
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="q2">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
                                         What markets can I trade?
                                     </button>
                                 </h2>
-                                <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+                                <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2"
+                                    data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
                                         Trade forex, indices, commodities and 24/7 crypto on supported platforms.
                                     </div>
@@ -284,11 +421,13 @@
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="q3">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
                                         Is there a free trial?
                                     </button>
                                 </h2>
-                                <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
+                                <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3"
+                                    data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
                                         Yes, start with the Free Challenge to test the rules without payment.
                                     </div>
@@ -312,14 +451,95 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
+        <div class="container-1440">
+            <div class="footer__top py-4">
+                <div class="row g-4">
+                    <div class="col-12 col-lg-4">
+                        <div class="footer__brand">
+                            <a href="/" class="footer__logo">
+                                <img src="./img/logo.svg" alt="JoinX" height="50">
+                            </a>
+                            <ul class="footer__contact">
+                                <li class="footer__contact-item"><span class="footer__contact-ico">📞</span> +36 70 300
+                                    1789</li>
+                                <li class="footer__contact-item"><span class="footer__contact-ico">✉️</span>
+                                    support@joinx.capital</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="footer__nav-group">
+                            <div class="footer__nav-title">Company</div>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item"><a href="#" class="footer__link">About us</a></li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Contact us</a></li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">How JoinX works</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="footer__nav-group">
+                            <div class="footer__nav-title">Legal</div>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Cookies</a></li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Terms &amp; Conditions</a>
+                                </li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="footer__nav-group">
+                            <div class="footer__nav-title">More</div>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Evaluation</a></li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Packages</a></li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Affiliate Programme</a>
+                                </li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Education</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="footer__nav-group">
+                            <div class="footer__nav-title">Follow</div>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Facebook</a></li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Instagram</a></li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">Twitter/X</a></li>
+                                <li class="footer__nav-item"><a href="#" class="footer__link">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="footer__divider"></div>
+
+            <div class="footer__disclaimer">
+                <p class="footer__disclaimer-text">
+                    This website is managed and operated by JoinX Hub Ltd (“Company”), registration number 03403733,
+                    with the registered address as listed. The technology solution for the trading platform, including
+                    the data feed, is provided by third‑party data providers. The Company does not act as a broker and
+                    does not offer any investment services under any jurisdiction. This is not investment opportunity
+                    and the Company does not accept any deposits or investments. The Company operates an evaluation
+                    program only and provides educational services and access to demo accounts in a simulated trading
+                    environment. The prospective customers should thoroughly examine program details before engaging in
+                    any of our offerings.
+                </p>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__copyright">Copyright © 2025 JoinX</div>
+            </div>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="./assets/sripts.js"></script>
+    <script src="./assets/scripts.js"></script>
 </body>
 
 </html>
