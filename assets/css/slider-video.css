@@ -11,20 +11,27 @@
 
 .testimonial__media {
   position: relative;
-  display: block;
+    height: 250px;
+    display: block;
 }
 
 .testimonial__img {
-  width: 100%;
-  border-radius: 14px;
-  display: block;
+  top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: 1;
 }
 
 /* Play button (скрыт по умолчанию) */
 .testimonial__play {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
+   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 60px;
   height: 60px;
   opacity: 0;
@@ -36,20 +43,40 @@
 .swiper-slide-active .testimonial__play {
   opacity: 1;
   pointer-events: auto;
+  z-index: 100;
+
+}
+.swiper-slide-active .testimonial__content {
+  opacity: 1;
+  background-color: #807e7e;
+  padding: 10px;
 }
 
 /* Text */
 .testimonial__content {
-  margin-top: 12px;
+  opacity: 0;
 }
 .testimonial__name {
   font-size: 18px;
   font-weight: 600;
+  color:var(--color-accent);
 }
 .testimonial__country {
-  font-size: 14px;
-  opacity: .7;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
 }
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
+
+.testimonials__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Navigation arrows */
 .testimonials__arrow {
@@ -57,6 +84,11 @@
   height: 52px;
   background: #AAD25A;
   border-radius: 50%;
+  color:white;
+}
+.testimonials__arrow svg {
+  padding: 15px;
+
 }
 
 .testimonials__arrow::after {

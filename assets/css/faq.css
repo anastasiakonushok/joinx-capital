@@ -1,0 +1,16 @@
+.accordion-faq .accordion-button:not(.collapsed){
+    background-color:transparent;
+}
+.accordion-faq .accordion-button{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: #000;
+}
+.accordion-faq .accordion-body{
+    color:var(--color-black);
+}
+.accordion-faq .accordion-item {
+    border:0;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}

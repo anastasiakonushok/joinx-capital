@@ -5,5 +5,19 @@
     .section-testimonials .section-subtitle {
         width: 100%;
     }
+    .funded-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+    }
+    .funded__card--challenge {
+        grid-column: 1;
+        grid-row:  3 / 3;
+    }
+    .feature-title {
+        font-size: 18px;
+    }
+    .feature p {
+        font-size: 14px;
+    }
 }
 
