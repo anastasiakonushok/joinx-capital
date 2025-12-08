@@ -265,6 +265,15 @@ table {
   }
 }
 
+/* Disable Bootstrap collapse animation ONLY for navbar menu */
+#mainMenu.collapse {
+  transition: none !important;
+}
+#mainMenu.collapsing {
+  transition: none !important;
+  height: auto !important;
+}
+
 /* THEME */
 :root {
   --jx-bg: #0b0b0e;

@@ -1,55 +1,69 @@
-// Swiper initialization for Pricing tabs (Bootstrap 5 compatible)
-(function init() {
-  const SLIDER_SELECTOR = '.swiper.pricing__slider';
-  const SIMPLE_SELECTOR = '.swiper.simple-swiper';
+// Swiper initialization with registry (supports many slider types)
+(function sliderRegistryInit() {
   const TAB_EVENT = 'shown.bs.tab';
 
-  const instances = new Map();
-
-  function createSwiper(el) {
-    if (!window.Swiper) return null;
-    if (instances.has(el)) return instances.get(el);
-    const swiper = new Swiper(el, {
-      slidesPerView: 1.1,
-      spaceBetween: 14,
-      pagination: {
-        el: el.querySelector('.swiper-pagination'),
-        clickable: true
-      },
-      breakpoints: {
-        576: { slidesPerView: 1.5 },
-        768: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
-        1400: { slidesPerView: 3 }
-      },
-      observer: true,
-      observeParents: true
-    });
-    instances.set(el, swiper);
-    return swiper;
-  }
-
-  function initAll() {
-    document.querySelectorAll(SLIDER_SELECTOR).forEach(el => createSwiper(el));
-    document.querySelectorAll(SIMPLE_SELECTOR).forEach(el => {
-      if (instances.has(el)) return;
-      const swiper = new Swiper(el, {
+  // Define slider types once; add more types here
+  const registry = {
+    pricing: {
+      selector: '.swiper[data-slider=\"pricing\"]',
+      options: {
+        slidesPerView: 1.1,
+        spaceBetween: 14,
+        pagination: { el: null, clickable: true },
+        breakpoints: {
+          576: { slidesPerView: 1.5 },
+          768: { slidesPerView: 2 },
+          992: { slidesPerView: 3 },
+          1400: { slidesPerView: 3 }
+        }
+      }
+    },
+    simple: {
+      selector: '.swiper[data-slider=\"simple\"], .swiper.simple-swiper',
+      options: {
         slidesPerView: 1.1,
         spaceBetween: 16,
-        pagination: {
-          el: el.querySelector('.swiper-pagination'),
-          clickable: true
-        },
+        pagination: { el: null, clickable: true },
         breakpoints: {
           576: { slidesPerView: 1.3 },
           768: { slidesPerView: 2 },
           992: { slidesPerView: 3 }
-        },
-        observer: true,
-        observeParents: true
-      });
-      instances.set(el, swiper);
+        }
+      }
+    }
+  };
+
+  const instances = new Map();
+
+  function createSwiper(el, typeKey) {
+    if (!window.Swiper) return null;
+    if (instances.has(el)) return instances.get(el);
+
+    const type = registry[typeKey] || {};
+    const baseOptions = type.options || {};
+    const options = {
+      ...baseOptions,
+      pagination: { ...(baseOptions.pagination || {}), el: el.querySelector('.swiper-pagination') },
+      observer: true,
+      observeParents: true
+    };
+
+    const swiper = new Swiper(el, options);
+    instances.set(el, swiper);
+    return swiper;
+  }
+
+  function initType(typeKey) {
+    const type = registry[typeKey];
+    if (!type) return;
+    document.querySelectorAll(type.selector).forEach(el => {
+      const attrType = el.getAttribute('data-slider') || typeKey;
+      createSwiper(el, attrType);
     });
+  }
+
+  function initAllTypes() {
+    Object.keys(registry).forEach(initType);
   }
 
   function onTabShown(e) {
@@ -57,25 +71,25 @@
     if (!targetId) return;
     const pane = document.querySelector(targetId);
     if (!pane) return;
-    const slider = pane.querySelector(SLIDER_SELECTOR);
-    if (!slider) return;
-    const instance = createSwiper(slider);
-    if (!instance) return;
-    setTimeout(() => {
-      instance.updateSize();
-      instance.updateSlides();
-      instance.update();
-    }, 200);
+
+    pane.querySelectorAll('.swiper').forEach(el => {
+      const typeKey = el.getAttribute('data-slider') || 'simple';
+      const instance = createSwiper(el, typeKey);
+      if (!instance) return;
+      setTimeout(() => {
+        instance.updateSize();
+        instance.updateSlides();
+        instance.update();
+      }, 200);
+    });
   }
 
-  // Ensure init runs whether DOMContentLoaded already fired or not
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAll, { once: true });
+    document.addEventListener('DOMContentLoaded', initAllTypes, { once: true });
   } else {
-    initAll();
+    initAllTypes();
   }
 
-  // Listen globally for Bootstrap tab shown events
   document.addEventListener(TAB_EVENT, onTabShown);
 })();
 
