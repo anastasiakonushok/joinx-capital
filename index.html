@@ -19,9 +19,9 @@
 </head>
 
 <body>
-    <header class="site-header py-2">
+    <header class="site-header py-2 header">
         <div class="container-1440">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark header__nav">
 
                 <!-- LOGO -->
                 <a class="navbar-brand" href="#">
@@ -34,7 +34,15 @@
                 </button>
 
                 <!-- NAVIGATION -->
-                <div class="collapse navbar-collapse flex justify-content-end" id="mainMenu">
+                <div class="collapse navbar-collapse header__menu header__menu--mobile flex justify-content-end" id="mainMenu">
+
+                    <!-- Mobile menu header (logo + close) -->
+                    <div class="mobile-menu__header d-lg-none">
+                        <a class="mobile-menu__logo" href="/">
+                            <img src="./img/logo.svg" alt="JoinX" height="48">
+                        </a>
+                        <button class="mobile-menu__close" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Close menu">✕</button>
+                    </div>
 
                     <!-- MENU -->
                     <ul class="navbar-nav ">
@@ -56,7 +64,7 @@
                     </ul>
 
                     <!-- BUTTONS -->
-                    <div class="d-flex flex-column flex-lg-row gap-2">
+                    <div class="d-flex flex-column flex-lg-row gap-2 header__actions">
                         <a href="#" class="btn btn-outline-light w-lg-auto">Sign In</a>
                         <a href="#" class="btn btn-light w-lg-auto">Sign Up</a>
                     </div>
@@ -85,10 +93,12 @@
                     <p>JoinX delivers top-tier trading conditions, including a 100% free challenge, helping traders
                         learn and improve their performance - across forex, crypto, and other markets.</p>
                     <div class="hero__payments">
-                        <img src="./img/skrill-logo.svg" alt="Skrill" height="26">
-                        <img src="./img/paypal-logo.svg" alt="PayPal" height="26">
-                        <img src="./img/master-logo.svg" alt="Mastercard" height="26">
-                        <img src="./img/visa-logo.svg" alt="Visa" height="26">
+                        <img src="./img/skrill-logo.svg" alt="Skrill" height="30">
+                        <img src="./img/master-logo.svg" alt="Mastercard" height="30">
+                        <img src="./img/paypal-logo.svg" alt="PayPal" height="30">
+                        <img src="./img/visa-logo.svg" alt="Visa" height="30">
+                        <img src="./img/all-crypto-logo.svg" alt="PCI" height="30">
+                        <img src="./img/dds-logo.svg" alt="PCI" height="30">
                     </div>
                 </div>
             </div>
@@ -107,7 +117,6 @@
                             If you have the skill but lack the resources or capital, prove your ability by passing our
                             Trading Challenge and earn a funded account within days.</p>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -212,6 +221,42 @@
                             <div class="feature-title">Education</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simple Swiper slider demo -->
+        <section class="section py-5">
+            <div class="container-1440">
+                <h2 class="section-title text-center mb-4">What traders say</h2>
+                <div class="swiper simple-swiper" data-slider="simple">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card p-4 text-center">
+                                <p class="mb-2">"Fast payouts and fair rules. Best experience so far."</p>
+                                <small>— Alex, London</small>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card p-4 text-center">
+                                <p class="mb-2">"Free Challenge was perfect to test my edge."</p>
+                                <small>— Maria, Madrid</small>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card p-4 text-center">
+                                <p class="mb-2">"Transparent scaling and great support."</p>
+                                <small>— Kenji, Tokyo</small>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card p-4 text-center">
+                                <p class="mb-2">"Simple evaluation flow and fair drawdowns."</p>
+                                <small>— Emma, Toronto</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>

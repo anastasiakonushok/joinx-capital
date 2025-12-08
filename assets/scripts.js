@@ -1,6 +1,7 @@
 // Swiper initialization for Pricing tabs (Bootstrap 5 compatible)
 (function init() {
   const SLIDER_SELECTOR = '.swiper.pricing__slider';
+  const SIMPLE_SELECTOR = '.swiper.simple-swiper';
   const TAB_EVENT = 'shown.bs.tab';
 
   const instances = new Map();
@@ -30,6 +31,25 @@
 
   function initAll() {
     document.querySelectorAll(SLIDER_SELECTOR).forEach(el => createSwiper(el));
+    document.querySelectorAll(SIMPLE_SELECTOR).forEach(el => {
+      if (instances.has(el)) return;
+      const swiper = new Swiper(el, {
+        slidesPerView: 1.1,
+        spaceBetween: 16,
+        pagination: {
+          el: el.querySelector('.swiper-pagination'),
+          clickable: true
+        },
+        breakpoints: {
+          576: { slidesPerView: 1.3 },
+          768: { slidesPerView: 2 },
+          992: { slidesPerView: 3 }
+        },
+        observer: true,
+        observeParents: true
+      });
+      instances.set(el, swiper);
+    });
   }
 
   function onTabShown(e) {
@@ -58,4 +78,18 @@
   // Listen globally for Bootstrap tab shown events
   document.addEventListener(TAB_EVENT, onTabShown);
 })();
+
+// Lock body scroll when mobile menu is opened (Bootstrap collapse)
+document.addEventListener('DOMContentLoaded', function () {
+  const menu = document.getElementById('mainMenu');
+  if (!menu) return;
+  menu.addEventListener('show.bs.collapse', () => {
+    document.body.style.overflow = 'hidden';
+  });
+  menu.addEventListener('hidden.bs.collapse', () => {
+    document.body.style.overflow = '';
+  });
+});
+
+
 

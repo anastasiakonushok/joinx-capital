@@ -172,6 +172,8 @@ table {
   width: 100%;
 }
 
+/* Header BEM hooks (selectors used in markup/styles below) */
+
 .nav-link {
   color: #fff !important;
   padding: 10px 8px;
@@ -195,13 +197,50 @@ table {
 
 /* MOBILE menu improvements */
 @media (max-width: 992px) {
-  .navbar-collapse {
-    padding-top: 15px;
+  /* Full-screen overlay menu when open */
+  .header__menu.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0a0a0a;
+    padding: 24px 20px;
+    overflow-y: auto;
+    z-index: 9999;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .navbar-nav .nav-link {
     padding: 12px 0;
     font-size: 16px;
+    color: #ffffff !important;
+  }
+
+  /* Mobile menu header (logo + close) */
+  .mobile-menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .mobile-menu__logo img {
+    display: block;
+    height: 48px;
+  }
+  .mobile-menu__close {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: #ffffff;
+    font-size: 1.75rem;
+    line-height: 1;
+    padding: 4px 8px;
   }
 
   /* Dropdown arrow for WP */
@@ -210,6 +249,19 @@ table {
     float: right;
     margin-top: 4px;
     font-size: 12px;
+  }
+
+  .header__actions {
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-menu__header,
+  .mobile-menu__close {
+    display: none !important;
   }
 }
 
@@ -396,4 +448,11 @@ body {
   .hero-title {
     font-size: 36px;
   }
+}
+
+/* Simple swiper styles */
+.simple-swiper .swiper-slide .card{
+  border-radius: 12px;
+  border: 1px solid #e6e8ec;
+  background: #ffffff;
 }

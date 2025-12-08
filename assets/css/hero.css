@@ -53,16 +53,18 @@
 }
 
 .hero__bottom{
-  margin-top: auto; /* pushes to bottom */
+  margin: auto auto 0 auto;
+    text-align: center;
+    width: 80%;
 }
 
 .hero__payments{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 32px;
   flex-wrap: wrap;
-  opacity: .95;
+  
 }
 
 /* Buttons use global system; ensure pill feel */
