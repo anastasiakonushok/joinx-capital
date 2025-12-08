@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 7,
+    slidesPerView: 6,
     spaceBetween: -35,
     loop: true,
     speed: 1200,
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     breakpoints: {
       0: { slidesPerView: 1.8 },
       801: { slidesPerView: 4.5 },
-      1300: { slidesPerView: 7 }
+      1300: { slidesPerView: 6 }
     },
 
     navigation: {

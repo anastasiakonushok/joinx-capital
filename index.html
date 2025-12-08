@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="./assets/css/buttons.css">
     <link rel="stylesheet" href="./assets/css/hero.css">
     <link rel="stylesheet" href="./assets/css/dual-cards.css">
-    <link rel="stylesheet" href="./assets/css/pricing.css">
-    <link rel="stylesheet" href="./assets/css/videos.css">
+    <link rel="stylesheet" href="./assets/css/product-card.css">
+    <link rel="stylesheet" href="./assets/css/slider-video.css">
     <link rel="stylesheet" href="./assets/css/funded.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/blocks-style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
     <title>Joinx capital</title>
 </head>
 
@@ -69,9 +71,9 @@
                     </ul>
 
                     <!-- BUTTONS -->
-                    <div class="d-flex flex-column flex-lg-row gap-2 header__actions">
-                        <a href="#" class="btn btn-outline-light w-lg-auto">Sign In</a>
-                        <a href="#" class="btn btn-light w-lg-auto">Sign Up</a>
+                    <div class="d-flex flex-column flex-lg-row gap-3 header__actions">
+                        <a href="#" class="btn btn-haeder btn-signin">Sign In</a>
+                        <a href="#" class="btn btn-dark btn-haeder btn-signup">Sign Up</a>
                     </div>
 
                 </div>
@@ -80,17 +82,20 @@
     </header>
 
     <main>
-        <section class="hero" style="background-image: url('./img/bg-hero.png');">
+        <section class="hero" style="background-image: url('./img/hero-bg.png');">
             <div class="hero__inner container-1440">
                 <div class="hero__content">
                     <h1 class="hero__title">Our Capital. Your Growth.</h1>
                     <p class="hero__subtitle">
                         Get up to $300,000 in Trading Power for Real‑World and Crypto Markets.
-                        <br>Keep up to 80% of simulated profits with fast payouts.
+                        <strong>Keep up to 80% of simulated profits with fast payouts.</strong>
                     </p>
-                    <div class="hero__actions">
-                        <a href="#pricing" class="btn btn--primary">Select Evaluation</a>
-                        <a href="#" class="btn btn--outline">Free Challenge</a>
+                    <div class="hero__btn">
+                        <div class="hero__actions">
+                            <a href="#pricing" class="btn-joinx btn-joinx--primary">Select Evaluation</a>
+                            <a href="#" class="btn-joinx btn-joinx--outline">Free Challenge</a>
+                        </div>
+                        <p class="hero__subtitle--small">JoinX provides accounts which are on a simulated trading environment only, we do not offer investment services or accept deposits.</p>
                     </div>
                 </div>
                 <div class="hero__bottom">
@@ -107,24 +112,25 @@
                 </div>
             </div>
         </section>
-
-
         <!-- Social proof -->
-        <section class="section pt-5 pb-4 bg-white">
+        <section class="section-testimonials pt-5 pb-4 bg-white">
             <div class="container-1440">
                 <div class="row align-items-center justify-content-between g-4">
-                    <div class="text-center ">
-                        <h2 class="section-title mb-2">Skill Meets Prop Trading.</h2>
-                        <p class="section-subtitle text-muted">JoinX offers paid and free trading challenges designed to
+                    <div class="text-center section-testimonials__text">
+                        <h2 class="section-title mb-4">Skill Meets Prop Trading.</h2>
+                        <p class="section-subtitle mb-3">JoinX offers paid and free trading challenges designed to
                             identify skilled traders. Follow the rules, hit the targets, and gain access to up to
                             $300,000 in trading power while keeping up to 80% of simulated profits. Top performers may
-                            be selected for a hired position proposal - all with zero risk to personal capital. 
+                            be selected for a hired position proposal - all with zero risk to personal capital.
+                        </p>
+                        <p class="section-subtitle" >
                             If you have the skill but lack the resources or capital, prove your ability by passing our
-                            Trading Challenge and earn a funded account within days.</p>
+                            Trading Challenge and earn a funded account within days.
+                        </p>
                     </div>
                 </div>
             </div>
-            <section class="testimonials">
+            <div class="testimonials">
                 <div class="testimonials__container">
 
                     <div class="swiper swiper-coverflow-custom">
@@ -341,12 +347,11 @@
                     </div>
 
                 </div>
-            </section>
-
+            </div>
         </section>
 
         <!-- Dual cards: Free Challenge / Evaluation -->
-        <section class="funded py-5">
+        <section class="funded">
             <div class="container-1440">
                 <div class="row g-4 funded__row">
 
@@ -512,46 +517,148 @@
                         <div class="swiper pricing__slider" data-slider="pricing">
                             <div class="swiper-wrapper">
                                 <div class="pricing__slide swiper-slide">
-                                    <article class="pricing__card">
-                                        <header class="pricing__card-head">
-                                            <h3 class="pricing__card-title">Account $10k</h3>
-                                            <div class="pricing__price">$99</div>
-                                        </header>
-                                        <ul class="pricing__features">
-                                            <li class="pricing__feature">Step 1 Profit Target — 5%</li>
-                                            <li class="pricing__feature">Max Drawdown — 5%</li>
-                                            <li class="pricing__feature">Reward Split — 80%</li>
-                                        </ul>
-                                        <a href="#" class="btn btn--primary w-100">See details</a>
-                                    </article>
+                                    <div class="product-card card shadow-sm">
+                                        <!-- IMAGE -->
+                                        <div class="product-card__image position-relative">
+                                            <img src="./img/crad-product.png" class="card-img-top" alt="Best Offer">
+
+                                            <span class="product-card__badge badge bg-light text-dark fw-semibold">
+                                                Best Offer
+                                            </span>
+                                        </div>
+                                        <!-- BODY -->
+                                        <div class="card-body product-card__body">
+
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h3 class="product-card__price m-0">$299</h3>
+
+                                                <p class="product-card__tagline text-end m-0">
+                                                    Spend $299<br>to trade with $50k
+                                                </p>
+                                            </div>
+
+                                            <ul class="list-unstyled product-card__list mb-4">
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Step 1 Profit Target</span><strong>5%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Step 2 Profit Target</span><strong>8%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Max Drawdown</span><strong>-10%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Spread</span><strong>Platinum</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Daily Drawdown</span><strong>-6.5%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Reward Split</span><strong>80%</strong>
+                                                </li>
+                                            </ul>
+
+                                            <a href="#" class="btn w-100 product-card__btn">
+                                                See details
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="pricing__slide swiper-slide">
-                                    <article class="pricing__card">
-                                        <header class="pricing__card-head">
-                                            <h3 class="pricing__card-title">Account $50k</h3>
-                                            <div class="pricing__price">$299</div>
-                                        </header>
-                                        <ul class="pricing__features">
-                                            <li class="pricing__feature">Step 1 Profit Target — 5%</li>
-                                            <li class="pricing__feature">Max Drawdown — 6%</li>
-                                            <li class="pricing__feature">Reward Split — 80%</li>
-                                        </ul>
-                                        <a href="#" class="btn btn--primary w-100">See details</a>
-                                    </article>
+                                    <div class="product-card card shadow-sm">
+                                        <!-- IMAGE -->
+                                        <div class="product-card__image position-relative">
+                                            <img src="./img/crad-product.png" class="card-img-top" alt="Best Offer">
+
+                                            <span class="product-card__badge badge bg-light text-dark fw-semibold">
+                                                Best Offer
+                                            </span>
+                                        </div>
+                                        <!-- BODY -->
+                                        <div class="card-body product-card__body">
+
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h3 class="product-card__price m-0">$299</h3>
+
+                                                <p class="product-card__tagline text-end m-0">
+                                                    Spend $299<br>to trade with $50k
+                                                </p>
+                                            </div>
+
+                                            <ul class="list-unstyled product-card__list mb-4">
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Step 1 Profit Target</span><strong>5%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Step 2 Profit Target</span><strong>8%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Max Drawdown</span><strong>-10%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Spread</span><strong>Platinum</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Daily Drawdown</span><strong>-6.5%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Reward Split</span><strong>80%</strong>
+                                                </li>
+                                            </ul>
+
+                                            <a href="#" class="btn w-100 product-card__btn">
+                                                See details
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="pricing__slide swiper-slide">
-                                    <article class="pricing__card">
-                                        <header class="pricing__card-head">
-                                            <h3 class="pricing__card-title">Account $100k</h3>
-                                            <div class="pricing__price">$999</div>
-                                        </header>
-                                        <ul class="pricing__features">
-                                            <li class="pricing__feature">Step 1 Profit Target — 5%</li>
-                                            <li class="pricing__feature">Max Drawdown — 8%</li>
-                                            <li class="pricing__feature">Reward Split — 80%</li>
-                                        </ul>
-                                        <a href="#" class="btn btn--primary w-100">See details</a>
-                                    </article>
+                                    <div class="product-card card shadow-sm">
+                                        <!-- IMAGE -->
+                                        <div class="product-card__image position-relative">
+                                            <img src="./img/crad-product.png" class="card-img-top" alt="Best Offer">
+
+                                            <span class="product-card__badge badge bg-light text-dark fw-semibold">
+                                                Best Offer
+                                            </span>
+                                        </div>
+                                        <!-- BODY -->
+                                        <div class="card-body product-card__body">
+
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h3 class="product-card__price m-0">$299</h3>
+
+                                                <p class="product-card__tagline text-end m-0">
+                                                    Spend $299<br>to trade with $50k
+                                                </p>
+                                            </div>
+
+                                            <ul class="list-unstyled product-card__list mb-4">
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Step 1 Profit Target</span><strong>5%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Step 2 Profit Target</span><strong>8%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Max Drawdown</span><strong>-10%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Spread</span><strong>Platinum</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Daily Drawdown</span><strong>-6.5%</strong>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span>Reward Split</span><strong>80%</strong>
+                                                </li>
+                                            </ul>
+
+                                            <a href="#" class="btn w-100 product-card__btn">
+                                                See details
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>

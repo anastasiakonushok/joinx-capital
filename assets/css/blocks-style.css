@@ -1,0 +1,17 @@
+.section-testimonials h2{
+    font-size: var(--font-size-h2-big);
+}
+.section-testimonials .section-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 119%;
+    text-align: center;
+    color: #060606;
+    width: 65%;
+    margin: 0 auto;
+}
+.section-title {
+    color: #060606;
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+}
