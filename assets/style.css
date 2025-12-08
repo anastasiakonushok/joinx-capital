@@ -1,0 +1,384 @@
+:root {
+  --bs-font-sans-serif: "Satoshi", sans-serif;
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  font-family: var(--bs-font-sans-serif);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* SATOSHI — NORMAL WEIGHTS */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Light.woff2") format("woff2"),
+       url("../fonts/Satoshi-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Regular.woff2") format("woff2"),
+       url("../fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Medium.woff2") format("woff2"),
+       url("../fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Bold.woff2") format("woff2"),
+       url("../fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Black.woff2") format("woff2"),
+       url("../fonts/Satoshi-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ITALIC WEIGHTS */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-LightItalic.woff2") format("woff2"),
+       url("../fonts/Satoshi-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Italic.woff2") format("woff2"),
+       url("../fonts/Satoshi-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-MediumItalic.woff2") format("woff2"),
+       url("../fonts/Satoshi-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-BoldItalic.woff2") format("woff2"),
+       url("../fonts/Satoshi-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-BlackItalic.woff2") format("woff2"),
+       url("../fonts/Satoshi-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+.container-1440 {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.site-header {
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  color: #fff !important;
+  padding: 10px 8px;
+}
+
+.nav-link:hover {
+  opacity: .7;
+}
+
+/* Buttons */
+.btn-light {
+  background: #b6ff8a;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* MOBILE menu improvements */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    padding-top: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+
+  /* Dropdown arrow for WP */
+  .menu-item-has-children > a::after {
+    content: " ▾";
+    float: right;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+}
+
+/* THEME */
+:root {
+  --jx-bg: #0b0b0e;
+  --jx-bg-2: #101114;
+  --jx-text: #ffffff;
+  --jx-muted: #a5a7ad;
+  --jx-accent: #b6ff8a;
+  --jx-border: #202128;
+}
+
+body {
+  background: var(--jx-bg);
+  color: var(--jx-text);
+}
+
+.section {
+  color: #111;
+}
+
+.bg-white {
+  background: #ffffff !important;
+}
+
+/* HERO */
+.hero-section {
+  min-height: 82vh;
+  background:
+    radial-gradient(900px 300px at 10% 10%, rgba(182,255,138,0.18), rgba(182,255,138,0) 60%),
+    radial-gradient(800px 300px at 85% 15%, rgba(182,255,138,0.18), rgba(182,255,138,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.3)),
+    var(--jx-bg) url('../img/noise.png');
+  background-blend-mode: screen, screen, normal, normal;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 48px;
+  line-height: 1.1;
+  color: var(--jx-text);
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  color: #cfd2d9;
+  font-size: 18px;
+}
+
+.payments img {
+  opacity: .8;
+  filter: grayscale(1);
+}
+
+.btn-green {
+  background: var(--jx-accent);
+  color: #0a0a0a;
+  font-weight: 700;
+  border: none;
+}
+
+/* TITLES IN LIGHT SECTIONS */
+.section-title {
+  color: #0a0a0a;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.section-subtitle {
+  color: #5b5f67;
+}
+
+/* AVATARS */
+.avatars .avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(180deg,#d9dbe2,#afb3bd);
+  border: 2px solid #fff;
+}
+
+/* PROMO CARDS */
+.promo-card {
+  background: linear-gradient(180deg,#ffffff, #f3f5f7);
+  border: 1px solid #e6e8ec;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.promo-card--dark {
+  background: radial-gradient(400px 250px at 10% 10%, rgba(182,255,138,0.22), rgba(182,255,138,0) 60%),
+              var(--jx-bg-2);
+  color: var(--jx-text);
+  border: 1px solid var(--jx-border);
+}
+
+.promo-title {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.promo-text {
+  color: #8f95a3;
+}
+
+/* FEATURES */
+.feature {
+  text-align: center;
+  background: #f7f8fa;
+  border: 1px solid #eef0f3;
+  border-radius: 14px;
+  padding: 22px 12px;
+}
+
+.feature-ico {
+  width: 40px;
+  height: 40px;
+  margin-inline: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: linear-gradient(180deg,#c5ff95,#8bf75f);
+}
+
+.feature-title {
+  color: #0a0a0a;
+  font-weight: 700;
+}
+
+/* PRICING */
+.price-card {
+  background: var(--jx-bg-2);
+  border: 1px solid var(--jx-border);
+  border-radius: 16px;
+  padding: 22px;
+  height: 100%;
+  color: var(--jx-text);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.price-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.price-amount {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.price-note {
+  color: #a5a7ad;
+  font-size: 14px;
+}
+
+.price-list {
+  color: #c3c6ce;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* CTA */
+.cta-section {
+  min-height: 50vh;
+  background:
+    radial-gradient(900px 300px at 20% 10%, rgba(182,255,138,0.18), rgba(182,255,138,0) 60%),
+    radial-gradient(800px 300px at 80% 15%, rgba(182,255,138,0.18), rgba(182,255,138,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.3)),
+    var(--jx-bg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 36px;
+  }
+}

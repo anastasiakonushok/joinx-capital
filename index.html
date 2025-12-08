@@ -1,21 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Joinx capital</title>
 </head>
+
 <body>
-    <header>
-        <div>
-            test
+    <header class="site-header py-2">
+        <div class="container-1440">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+
+                <!-- LOGO -->
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logo.svg" alt="JoinX" height="62">
+                </a>
+
+                <!-- BURGER -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- NAVIGATION -->
+                <div class="collapse navbar-collapse flex justify-content-end" id="mainMenu">
+
+                    <!-- MENU -->
+                    <ul class="navbar-nav ">
+                        <li class="menu-item"><a class="nav-link" href="#">How it works</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">FAQ</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Academy</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Blogs</a></li>
+
+                        <!-- Language dropdown -->
+                        <li class="menu-item menu-item-has-children dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">EN</a>
+                            <ul class="sub-menu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">EN</a></li>
+                                <li><a class="dropdown-item" href="#">ES</a></li>
+                                <li><a class="dropdown-item" href="#">FR</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- BUTTONS -->
+                    <div class="d-flex flex-column flex-lg-row gap-2">
+                        <a href="#" class="btn btn-outline-light w-lg-auto">Sign In</a>
+                        <a href="#" class="btn btn-light w-lg-auto">Sign Up</a>
+                    </div>
+
+                </div>
+            </nav>
         </div>
     </header>
-    <main>
 
+    <main>
+        <section class="hero-section d-flex align-items-center">
+            <div class="container-1440 text-center">
+
+                <!-- Title -->
+                <h1 class="hero-title mb-3">
+                    Our Capital. Your Growth.
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="hero-subtitle mb-4">
+                    Get up to $300,000 in Trading Power for Real-World and Crypto Markets. <br>
+                    Keep up to 80% of simulated profits with fast payouts.
+                </p>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+                    <a href="#" class="btn btn-green px-4 py-2">SELECT EVALUATION</a>
+                    <a href="#" class="btn btn-outline-light px-4 py-2">FREE CHALLENGE</a>
+                </div>
+
+                <!-- Payments block -->
+                <div class="payments d-flex justify-content-center align-items-center gap-4 flex-wrap">
+                    <img src="skrill.svg" alt="Skrill" height="26">
+                    <img src="paypal.svg" alt="PayPal" height="26">
+                    <img src="cards.svg" alt="Cards" height="26">
+                    <img src="pci.svg" alt="PCI" height="26">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Social proof -->
+        <section class="section pt-5 pb-4 bg-white">
+            <div class="container-1440">
+                <div class="row align-items-center justify-content-between g-4">
+                    <div class="col-lg-5">
+                        <h2 class="section-title mb-2">Trade with a reliable partner</h2>
+                        <p class="section-subtitle text-muted">Thousands of traders choose us for fair challenges, fast payouts and transparent rules.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="avatars d-flex flex-wrap align-items-center gap-3 justify-content-lg-end">
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dual cards: Free Challenge / Evaluation -->
+        <section class="section py-5">
+            <div class="container-1440">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="promo-card promo-card--dark h-100">
+                            <div>
+                                <h3 class="promo-title mb-2">Free Challenge</h3>
+                                <p class="promo-text mb-4">Practice in a risk‑free environment. Prove your edge and get fast‑tracked to funded status.</p>
+                            </div>
+                            <a href="#" class="btn btn-light">Start Free</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="promo-card h-100">
+                            <div>
+                                <h3 class="promo-title mb-2">Evaluation Accounts</h3>
+                                <p class="promo-text mb-4">Choose your initial balance and ruleset. Scale up to $300k in simulated capital.</p>
+                            </div>
+                            <a href="#" class="btn btn-green">Select Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features icons -->
+        <section class="section py-5 bg-white">
+            <div class="container-1440">
+                <h2 class="section-title text-center mb-4">Why traders choose JoinX</h2>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="feature">
+                            <div class="feature-ico"></div>
+                            <div class="feature-title">Fast payouts</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="feature">
+                            <div class="feature-ico"></div>
+                            <div class="feature-title">Fair rules</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="feature">
+                            <div class="feature-ico"></div>
+                            <div class="feature-title">Scaling</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="feature">
+                            <div class="feature-ico"></div>
+                            <div class="feature-title">24/7 crypto</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="feature">
+                            <div class="feature-ico"></div>
+                            <div class="feature-title">Support</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="feature">
+                            <div class="feature-ico"></div>
+                            <div class="feature-title">Education</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="section py-5">
+            <div class="container-1440">
+                <h2 class="section-title text-center mb-4">Choose Your Trading Plan</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="price-card">
+                            <div class="price-head">
+                                <div class="price-amount">$10k</div>
+                                <div class="price-note">Evaluation</div>
+                            </div>
+                            <ul class="price-list">
+                                <li>Max drawdown 5%</li>
+                                <li>Profit split up to 80%</li>
+                                <li>Payouts bi‑weekly</li>
+                            </ul>
+                            <a href="#" class="btn btn-green w-100">Select</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="price-card">
+                            <div class="price-head">
+                                <div class="price-amount">$25k</div>
+                                <div class="price-note">Evaluation</div>
+                            </div>
+                            <ul class="price-list">
+                                <li>Max drawdown 6%</li>
+                                <li>Profit split up to 80%</li>
+                                <li>Payouts bi‑weekly</li>
+                            </ul>
+                            <a href="#" class="btn btn-green w-100">Select</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="price-card">
+                            <div class="price-head">
+                                <div class="price-amount">$50k</div>
+                                <div class="price-note">Evaluation</div>
+                            </div>
+                            <ul class="price-list">
+                                <li>Max drawdown 6%</li>
+                                <li>Profit split up to 80%</li>
+                                <li>Payouts bi‑weekly</li>
+                            </ul>
+                            <a href="#" class="btn btn-green w-100">Select</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="price-card">
+                            <div class="price-head">
+                                <div class="price-amount">$100k</div>
+                                <div class="price-note">Evaluation</div>
+                            </div>
+                            <ul class="price-list">
+                                <li>Max drawdown 8%</li>
+                                <li>Profit split up to 80%</li>
+                                <li>Payouts bi‑weekly</li>
+                            </ul>
+                            <a href="#" class="btn btn-green w-100">Select</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section py-5 bg-white">
+            <div class="container-1440">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                                        How do payouts work?
+                                    </button>
+                                </h2>
+                                <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Payouts are available bi‑weekly with up to 80% of simulated profits.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                                        What markets can I trade?
+                                    </button>
+                                </h2>
+                                <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Trade forex, indices, commodities and 24/7 crypto on supported platforms.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="q3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                                        Is there a free trial?
+                                    </button>
+                                </h2>
+                                <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, start with the Free Challenge to test the rules without payment.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section d-flex align-items-center text-center">
+            <div class="container-1440">
+                <h2 class="hero-title mb-3">Discover Your Trading Potential</h2>
+                <p class="hero-subtitle mb-4">Join thousands of profitable traders. Get funded and grow.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="#" class="btn btn-green px-4 py-2">Get Started</a>
+                    <a href="#" class="btn btn-outline-light px-4 py-2">Learn More</a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./assets/sripts.js"></script>
 </body>
+
 </html>
