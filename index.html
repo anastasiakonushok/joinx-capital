@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="./assets/css/hero.css">
     <link rel="stylesheet" href="./assets/css/dual-cards.css">
     <link rel="stylesheet" href="./assets/css/pricing.css">
+    <link rel="stylesheet" href="./assets/css/videos.css">
     <link rel="stylesheet" href="./assets/css/funded.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <title>Joinx capital</title>
@@ -35,14 +37,16 @@
                 </button>
 
                 <!-- NAVIGATION -->
-                <div class="collapse navbar-collapse header__menu header__menu--mobile flex justify-content-end" id="mainMenu">
+                <div class="collapse navbar-collapse header__menu header__menu--mobile flex justify-content-end"
+                    id="mainMenu">
 
                     <!-- Mobile menu header (logo + close) -->
                     <div class="mobile-menu__header d-lg-none">
                         <a class="mobile-menu__logo" href="/">
                             <img src="./img/logo.svg" alt="JoinX" height="48">
                         </a>
-                        <button class="mobile-menu__close" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Close menu">✕</button>
+                        <button class="mobile-menu__close" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainMenu" aria-label="Close menu">✕</button>
                     </div>
 
                     <!-- MENU -->
@@ -88,7 +92,6 @@
                         <a href="#pricing" class="btn btn--primary">Select Evaluation</a>
                         <a href="#" class="btn btn--outline">Free Challenge</a>
                     </div>
-                    
                 </div>
                 <div class="hero__bottom">
                     <p>JoinX delivers top-tier trading conditions, including a 100% free challenge, helping traders
@@ -105,11 +108,12 @@
             </div>
         </section>
 
+
         <!-- Social proof -->
         <section class="section pt-5 pb-4 bg-white">
             <div class="container-1440">
                 <div class="row align-items-center justify-content-between g-4">
-                    <div class="text-center">
+                    <div class="text-center ">
                         <h2 class="section-title mb-2">Skill Meets Prop Trading.</h2>
                         <p class="section-subtitle text-muted">JoinX offers paid and free trading challenges designed to
                             identify skilled traders. Follow the rules, hit the targets, and gain access to up to
@@ -120,6 +124,225 @@
                     </div>
                 </div>
             </div>
+            <section class="testimonials">
+                <div class="testimonials__container">
+
+                    <div class="swiper swiper-coverflow-custom">
+
+                        <div class="swiper-wrapper">
+
+                            <!-- Slide -->
+                            <div class="swiper-slide testimonial" data-video="videos/client1.mp4">
+                                <a href="videos/client1.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+
+                                    <!-- Play button (будет видно только на центральном слайде) -->
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64" viewBox="0 0 60 60">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Marton</h4>
+                                    <p class="testimonial__country">Czech Republic 🇨🇿</p>
+                                </div>
+                            </div>
+
+                            <!-- Дублируешь -->
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testimonial" data-video="videos/client2.mp4">
+                                <a href="videos/client2.mp4" data-fancybox="testimonials" class="testimonial__media">
+                                    <img src="./img/testimon-1.png" alt="Client testimonial" class="testimonial__img">
+                                    <div class="testimonial__play">
+                                        <svg width="64" height="64">
+                                            <circle cx="30" cy="30" r="30" fill="#fff" />
+                                            <polygon points="25,20 45,30 25,40" fill="#AAD25A" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="testimonial__content">
+                                    <h4 class="testimonial__name">Anna</h4>
+                                    <p class="testimonial__country">Hungary 🇭🇺</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Arrows -->
+                        <div class="swiper-button-prev testimonials__arrow testimonials__arrow--prev"></div>
+                        <div class="swiper-button-next testimonials__arrow testimonials__arrow--next"></div>
+
+                    </div>
+
+                </div>
+            </section>
+
         </section>
 
         <!-- Dual cards: Free Challenge / Evaluation -->
@@ -131,7 +354,9 @@
                     <div class="col-lg-6 funded__col funded__col--left">
                         <!-- Top-left: Evaluation -->
                         <article class="funded__card funded__card--evaluation">
-                            <div class="funded__media" aria-hidden="true"></div>
+                            <div class="funded__media" aria-hidden="true">
+                                <img src="./img/image-cricle.png" alt="">
+                            </div>
                             <div class="funded__content">
                                 <h2 class="funded__title heading-2">Can You Qualify For A Funded Account?</h2>
                                 <p class="funded__text body-text">
@@ -166,14 +391,13 @@
 
                     <!-- RIGHT COLUMN -->
                     <div class="col-lg-6 funded__col funded__col--right">
-                        <article class="funded__card funded__card--challenge">
+                        <article class="funded__card funded__card--challenge"
+                            style="background-image: url('./img/man.png')">
                             <div class="funded__content">
                                 <h2 class="funded__title heading-2">Free Challenge</h2>
-                                <p class="funded__text body-text">Practice with realistic rules in a risk‑free
-                                    environment. Test your edge before committing.</p>
+
                                 <a href="#" class="btn btn--primary funded__cta">Claim Now</a>
                             </div>
-                            <div class="funded__media" aria-hidden="true"></div>
                         </article>
                     </div>
 
@@ -225,42 +449,37 @@
                 </div>
             </div>
         </section>
-
-        <!-- Simple Swiper slider demo -->
-        <section class="section py-5">
-            <div class="container-1440">
-                <h2 class="section-title text-center mb-4">What traders say</h2>
-                <div class="swiper simple-swiper" data-slider="simple">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="card p-4 text-center">
-                                <p class="mb-2">"Fast payouts and fair rules. Best experience so far."</p>
-                                <small>— Alex, London</small>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card p-4 text-center">
-                                <p class="mb-2">"Free Challenge was perfect to test my edge."</p>
-                                <small>— Maria, Madrid</small>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card p-4 text-center">
-                                <p class="mb-2">"Transparent scaling and great support."</p>
-                                <small>— Kenji, Tokyo</small>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card p-4 text-center">
-                                <p class="mb-2">"Simple evaluation flow and fair drawdowns."</p>
-                                <small>— Emma, Toronto</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
+        <!-- <div class="product-slider-wrapper">
+            <div class="swiper product-slider">
+              <div class="swiper-wrapper">
+          
+                <div class="swiper-slide" data-video="video1.mp4">
+                  <img src="img/user1.jpg" alt="">
+                  <button class="play-btn"></button>
+                  <div class="card-info">Anna — Hungary</div>
                 </div>
+          
+                <div class="swiper-slide" data-video="video2.mp4">
+                  <img src="img/user2.jpg" alt="">
+                  <button class="play-btn"></button>
+                  <div class="card-info">Marton — Czech Republic</div>
+                </div>
+          
+                <div class="swiper-slide" data-video="video3.mp4">
+                  <img src="img/user3.jpg" alt="">
+                  <button class="play-btn"></button>
+                  <div class="card-info">Julia — Poland</div>
+                </div>
+          
+              </div>
+          
+              <div class="swiper-pagination"></div>
             </div>
-        </section>
+          
+            <button class="slider-nav prev">‹</button>
+            <button class="slider-nav next">›</button>
+          </div> -->
+          
 
         <!-- Pricing -->
         <section class="pricing py-5" id="pricing">
@@ -434,7 +653,7 @@
         <section class="section py-5 bg-white">
             <div class="container-1440">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="">
                         <h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
                         <div class="accordion" id="faqAccordion">
                             <div class="accordion-item">
@@ -581,6 +800,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

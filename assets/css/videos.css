@@ -1,0 +1,63 @@
+.testimonials {
+  padding: 60px 0;
+}
+
+
+.testimonial {
+  text-align: center;
+  position: relative;
+}
+
+.testimonial__media {
+  position: relative;
+  display: block;
+}
+
+.testimonial__img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+/* Play button (скрыт по умолчанию) */
+.testimonial__play {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+
+/* Показывать play только на центральном слайде */
+.swiper-slide-active .testimonial__play {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Text */
+.testimonial__content {
+  margin-top: 12px;
+}
+.testimonial__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+.testimonial__country {
+  font-size: 14px;
+  opacity: .7;
+}
+
+/* Navigation arrows */
+.testimonials__arrow {
+  width: 52px;
+  height: 52px;
+  background: #AAD25A;
+  border-radius: 50%;
+}
+
+.testimonials__arrow::after {
+  display: none;
+}

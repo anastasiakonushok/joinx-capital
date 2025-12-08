@@ -30,6 +30,31 @@
           992: { slidesPerView: 3 }
         }
       }
+    },
+    videos: {
+      selector: '.videos__slider',
+      options: {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 25,
+          stretch: 0,
+          depth: 120,
+          modifier: 1,
+          slideShadows: false
+        },
+        navigation: {
+          nextEl: '.videos__nav--next',
+          prevEl: '.videos__nav--prev'
+        },
+        breakpoints: {
+          320: { slidesPerView: 1.2 },
+          768: { slidesPerView: 2.2 },
+          1200: { slidesPerView: 3 }
+        }
+      }
     }
   };
 
@@ -43,10 +68,14 @@
     const baseOptions = type.options || {};
     const options = {
       ...baseOptions,
-      pagination: { ...(baseOptions.pagination || {}), el: el.querySelector('.swiper-pagination') },
       observer: true,
       observeParents: true
     };
+    // attach pagination only if present or element exists
+    const paginationEl = el.querySelector('.swiper-pagination');
+    if (baseOptions.pagination || paginationEl) {
+      options.pagination = { ...(baseOptions.pagination || {}), el: paginationEl };
+    }
 
     const swiper = new Swiper(el, options);
     instances.set(el, swiper);
@@ -107,3 +136,99 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const swiperEl = document.querySelector(".swiper-coverflow-custom");
+  if (!swiperEl || typeof Swiper === "undefined") return;
+
+  new Swiper(swiperEl, {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 7,
+    spaceBetween: -35,
+    loop: true,
+    speed: 1200,
+
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+
+    coverflowEffect: {
+      rotate: 15,
+      stretch: 0,
+      depth: 120,
+      modifier: 1,
+      slideShadows: false,
+    },
+
+    breakpoints: {
+      0: { slidesPerView: 1.8 },
+      801: { slidesPerView: 4.5 },
+      1300: { slidesPerView: 7 }
+    },
+
+    navigation: {
+      nextEl: ".testimonials__arrow--next",
+      prevEl: ".testimonials__arrow--prev",
+    }
+  });
+});
+
+function initProductSliders(root = document) {
+  const sliders = root.querySelectorAll('.product-slider');
+
+  if (!sliders.length) return; // Ничего нет — ничего не делаем
+
+  sliders.forEach(slider => {
+      const slides = slider.querySelectorAll('.swiper-slide');
+      if (!slides.length) return;
+
+      // Создаём Swiper
+      const swiper = new Swiper(slider, {
+          slidesPerView: 'auto',
+          spaceBetween: 24,
+          centeredSlides: true,
+          loop: slides.length > 2,
+          pagination: {
+              el: slider.querySelector('.swiper-pagination'),
+              clickable: true
+          },
+          navigation: {
+              nextEl: slider.parentElement.querySelector('.next'),
+              prevEl: slider.parentElement.querySelector('.prev'),
+          },
+          breakpoints: {
+              0:   { slidesPerView: 1.2 },
+              768: { slidesPerView: 2.2 },
+              1200:{ slidesPerView: 3 }
+          }
+      });
+
+      // Fancybox видео
+      slides.forEach(slide => {
+          slide.addEventListener("click", () => {
+              const url = slide.dataset.video;
+              if (!url || !window.Fancybox) return;
+
+              Fancybox.show([{ src: url, type: "video" }]);
+          });
+      });
+  });
+}
+
+
+// ---------- ИНИЦИАЛИЗАЦИЯ ----------
+document.addEventListener("DOMContentLoaded", () => {
+  initProductSliders();
+});
+
+// ---------- ПОДДЕРЖКА BOOTSTRAP TABS ----------
+document.addEventListener("shown.bs.tab", e => {
+  const pane = document.querySelector(e.target.getAttribute("data-bs-target"));
+  if (pane) {
+      setTimeout(() => initProductSliders(pane), 50); // даем вкладке открыться
+  }
+});

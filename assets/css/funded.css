@@ -28,14 +28,7 @@
   color:#0a0a0a;
   align-items:flex-start;
 }
-.funded__card--evaluation .funded__media{
-  width:84px; height:84px; border-radius:50%;
-  flex:0 0 84px;
-  background:
-    radial-gradient(closest-side, #c5ff95, #8bf75f),
-    linear-gradient(180deg, #c7f2a8, #c7f2a8);
-  box-shadow: 0 6px 22px rgba(0,0,0,.12);
-}
+
 
 /* Info (bottom-left) */
 .funded__card--info{
