@@ -82,10 +82,24 @@
 
 .contact-buttons__item svg path {
     transition: 0.3s ease;
-    stroke: currentColor; /* ← ключевой момент */
+    stroke: currentColor;
+    /* ← ключевой момент */
 }
 
 /* WhatsApp по умолчанию — иконка чёрная */
 .contact-buttons__item--whatsapp svg path {
     color: #171717;
+}
+
+.section-faq .section-faq__title {
+    font-size: var(--font-size-h2-big);
+}
+
+.section-faq .section-faq__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 86%;
+    text-align: center;
+    color: #232323;
+    margin-bottom: 70px;
 }

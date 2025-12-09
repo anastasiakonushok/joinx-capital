@@ -58,5 +58,27 @@
         grid-template-columns: 1fr;
         gap: 16px;
     }
+    .section-featured .featured-content {
+        width: 100%;
+    }
+    .section-featured {
+        padding: 0px 0px 20px 0px;
+        display: flex;
+        flex-direction: column-reverse;
+        background: #0B0A0A;
+    }
+    .section-featured .featured-image {
+        position: relative;
+        width: 100%;
+    }
+    .section-featured .featured-content {
+        padding: 20px 0px;
+    }
+    .accordion-faq {
+        width: 100%;
+    }
+    .contact-buttons {
+        width: 100%;
+    }
 }
 
