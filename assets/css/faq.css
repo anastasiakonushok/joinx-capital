@@ -39,6 +39,7 @@
     justify-content: space-between;
 }
 
+/* Базовая кнопка */
 .contact-buttons__item {
     min-width: 190px;
     border-radius: 16px;
@@ -51,17 +52,29 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: 0.3s ease;
 }
 
-.section-faq h2 {
-    font-size: var(--font-size-h2-big);
+/* WhatsApp — всегда зелёная по умолчанию */
+.contact-buttons__item--whatsapp {
+    background: linear-gradient(180deg, #caf080 0%, #93b848 100%);
+    color: #171717;
 }
 
-.section-faq .section-faq__text {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 86%;
-    text-align: center;
-    color: #232323;
-    margin-bottom: 70px;
+/* Любая кнопка при ховере — становится зелёной */
+.contact-buttons__item:hover {
+    background: linear-gradient(180deg, #caf080 0%, #93b848 100%);
+    color: #171717;
+}
+
+/* Когда ХОВЕР НА ЛЮБОЙ другой кнопке — WhatsApp становится чёрной */
+.contact-buttons__list:hover .contact-buttons__item--whatsapp {
+    background: #131313;
+    color: #fff;
+}
+
+/* Но если ховер именно на WhatsApp — она снова зелёная */
+.contact-buttons__item--whatsapp:hover {
+    background: linear-gradient(180deg, #caf080 0%, #93b848 100%) !important;
+    color: #171717 !important;
 }
