@@ -77,8 +77,22 @@
     .accordion-faq {
         width: 100%;
     }
+    
     .contact-buttons {
         width: 100%;
+        margin-top: 50px;
+    }
+
+    .contact-buttons__list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .contact-buttons__item {
+        flex: 0 0 calc(50% - 20px); /* две кнопки в ряд */
+        min-width: calc(50% - 20px);
+        padding: 20px 15px;
+        font-size: 18px;
     }
 }
 

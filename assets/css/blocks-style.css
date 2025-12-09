@@ -43,9 +43,11 @@
 
 .feature-title {
     font-weight: 700;
-    font-size: 20px;
-    line-height: 149%;
-    color: #fff;
+    font-size: 24px;
+    line-height: 117%;
+    text-align: center;
+    color: #000;
+    margin: 20px 0px;
 }
 
 .feature p {
@@ -69,8 +71,33 @@
     letter-spacing: -0.03em;
 }
 
-.cta-section {
+.section-cta {
     padding: 146px 0px 80px 0px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-cta h2 {
+    font-size: var(--font-big);
+    line-height: 130%;
+    font-weight: var(--font-weight-bold);
+    color: #fff;
+    margin-bottom: 40;
+}
+.section-cta__actions {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.section-cta__text {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 130%;
+    text-align: center;
+    color: #ccc;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .section-pricing h2 {
@@ -110,13 +137,14 @@
     gap: 11px;
 }
 
-.feature-title {
-    font-size: 18px;
+.feature-item__title {
     font-weight: 700;
-    margin-bottom: 4px;
+    font-size: 20px;
+    line-height: 149%;
+    color: #fff;
 }
 
-.feature-text {
+.feature-item__text {
     font-weight: 500;
     font-size: 14px;
     line-height: 114%;

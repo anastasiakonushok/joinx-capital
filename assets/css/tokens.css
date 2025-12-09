@@ -25,6 +25,7 @@
   --color-white-rgb: 255, 255, 255;
 
   /* Typography */
+  --font-big: 5rem;
   --font-size-h1: 4.5rem;
   --font-size-h2: 2.25rem;
   --font-size-h2-big:3.125rem;
@@ -67,6 +68,7 @@
 
 @media (max-width: 1200px) {
   :root {
+    --font-big:4.5rem;
     --font-size-h1: 3rem;
     --font-size-h2: 2.1rem;
     --font-size-h2-big:3rem;
@@ -77,6 +79,7 @@
 }
 @media (max-width: 992px) {
   :root {
+    --font-big:4rem;
     --font-size-h1: 2.75rem;
     --font-size-h2-big:2.5rem;
     --font-size-h2-extra:3rem;
@@ -87,6 +90,7 @@
 }
 @media (max-width: 768px) {
   :root {
+    --font-big:3.5rem;
     --font-size-h1: 2.75rem;
     --font-size-h2: 1.65rem;
     --font-size-h2-extra:3rem;
@@ -96,6 +100,7 @@
 }
 @media (max-width: 480px) {
   :root {
+    --font-big:3rem;
     --font-size-h1: 2.7rem;
     --font-size-h2-big:2.5rem;
     --font-size-h2-extra:2.8rem;
