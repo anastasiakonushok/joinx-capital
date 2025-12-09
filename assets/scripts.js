@@ -232,3 +232,18 @@ document.addEventListener("shown.bs.tab", e => {
       setTimeout(() => initProductSliders(pane), 50); // даем вкладке открыться
   }
 });
+
+
+
+Fancybox.bind("[data-fancybox]", {
+  placeFocusBack: false,
+  Thumbs: false,
+	Toolbar: {
+    display: [
+      "zoom",
+      "fullscreen",
+      "download",
+      "close"
+    ]
+  }
+});

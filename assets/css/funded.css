@@ -25,7 +25,6 @@
 
 .funded__card {
   position: relative;
-  display: flex;
   gap: 16px;
   border-radius: 16px;
   height: 100%;
