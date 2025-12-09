@@ -79,6 +79,7 @@
 .section-pricing h2 {
     font-size: var(--font-size-h2-big);
 }
+
 .section-pricing .section-subtitle {
     font-weight: 500;
     font-size: 32px;
@@ -86,4 +87,8 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: #181818;
+}
+
+.section-featured {
+    background: linear-gradient(109deg, #0a0909 0%, rgba(40, 39, 39, 0) 60.98%);
 }
