@@ -114,13 +114,14 @@ Fancybox.bind("[data-fancybox]", {
 
 
 
-// Функция инициализации одного слайдера
+// Инициализация одного слайдера
 function initPricingSlider(swiperEl) {
-  if (swiperEl.dataset.initialized === 'true') return; // Защита от дубля
+  if (swiperEl.dataset.initialized === 'true') return;
   swiperEl.dataset.initialized = 'true';
 
   const slides = swiperEl.querySelectorAll('.swiper-slide');
   const slideCount = slides.length;
+  const paginationContainer = swiperEl.querySelector('.swiper-pagination');
 
   // Добавляем класс в зависимости от количества слайдов
   swiperEl.classList.add(`pricing-slider-${slideCount}`);
@@ -131,7 +132,6 @@ function initPricingSlider(swiperEl) {
     const paginEl = slide.querySelector('.product-pagin');
     let label = paginEl ? paginEl.textContent.trim() : '';
 
-    // Применяем те же правила обработки текста
     if (/free/i.test(label) && /challenge/i.test(label)) {
       label = 'Free';
     } else if (/ingyenes/i.test(label) && /kihívás/i.test(label)) {
@@ -141,34 +141,31 @@ function initPricingSlider(swiperEl) {
     } else if (/^\d+$/i.test(label)) {
       // оставляем как есть
     }
-    // Если label пуст — используем индекс или "Option N"
     if (!label) label = `Option ${labels.length + 1}`;
     labels.push(label);
   });
 
-  // Создаём кастомную пагинацию
-  const customPagination = document.createElement('div');
-  customPagination.classList.add('custom-pagination');
+  // 🔸 ВСТАВЛЯЕМ ПАГИНАЦИЮ ВНУТРЬ .swiper-pagination
+  if (paginationContainer) {
+    paginationContainer.innerHTML = '';
+    paginationContainer.classList.add('custom-pagination');
 
-  labels.forEach((text, index) => {
-    const bullet = document.createElement('span');
-    bullet.classList.add('pagination-bullet');
-    if (index === 2) bullet.classList.add('active'); // как у вас
-    bullet.dataset.index = index;
-    bullet.setAttribute('role', 'button');
-    bullet.textContent = text;
-    customPagination.appendChild(bullet);
-  });
-
-  swiperEl.parentNode.insertBefore(customPagination, swiperEl);
+    labels.forEach((text, index) => {
+      const bullet = document.createElement('span');
+      bullet.classList.add('pagination-bullet');
+      if (index === 2) bullet.classList.add('active');
+      bullet.dataset.index = index;
+      bullet.setAttribute('role', 'button');
+      bullet.textContent = text;
+      paginationContainer.appendChild(bullet);
+    });
+  }
 
   // Определяем начальный слайд
   let initialSlide = 0;
   if (slideCount >= 2) {
     initialSlide = Math.floor(slideCount / 2);
   }
-
-  // Рассчитываем slidesPerView для desktop
   const slidesPerViewDesktop = Math.min(4, slideCount);
 
   // Инициализируем Swiper
@@ -193,8 +190,9 @@ function initPricingSlider(swiperEl) {
 
     on: {
       init: function () {
-        updateActiveBullet(this.activeIndex);
-        // Убираем inert (если был)
+        if (paginationContainer) {
+          updateActiveBullet(this.activeIndex);
+        }
         this.slides.forEach(slide => slide.removeAttribute('inert'));
       },
     },
@@ -202,40 +200,53 @@ function initPricingSlider(swiperEl) {
 
   // Обновление активного bullet
   function updateActiveBullet(index) {
-    customPagination.querySelectorAll('.pagination-bullet').forEach((bullet, i) => {
-      if (i === index) {
-        bullet.classList.add('active');
-      } else {
-        bullet.classList.remove('active');
-      }
+    if (!paginationContainer) return;
+    paginationContainer.querySelectorAll('.pagination-bullet').forEach((bullet, i) => {
+      bullet.classList.toggle('active', i === index);
     });
   }
 
-  // Обработчики событий
   swiperInstance.on('slideChange', () => {
     updateActiveBullet(swiperInstance.activeIndex);
   });
 
   // Клик по bullet
-  customPagination.addEventListener('click', (e) => {
-    const bullet = e.target.closest('.pagination-bullet');
-    if (bullet) {
-      const index = parseInt(bullet.dataset.index, 10);
-      swiperInstance.slideTo(index);
-    }
-  });
+  if (paginationContainer) {
+    paginationContainer.addEventListener('click', (e) => {
+      const bullet = e.target.closest('.pagination-bullet');
+      if (bullet) {
+        const index = parseInt(bullet.dataset.index, 10);
+        swiperInstance.slideTo(index);
+      }
+    });
+  }
 
-  // Обработка клика по слайду (опционально)
+  // Опционально: клик по слайду
   swiperEl.addEventListener('click', (e) => {
     const clickedSlide = e.target.closest('.swiper-slide');
     if (clickedSlide) {
-      const index = Array.from(swiperEl.querySelectorAll('.swiper-slide')).indexOf(clickedSlide);
+      const index = Array.from(slides).indexOf(clickedSlide);
       if (index !== -1) {
         swiperInstance.slideTo(index);
       }
     }
   });
 }
+
+// Инициализация всех слайдеров
+function initAllPricingSliders() {
+  document.querySelectorAll('.swiper[data-slider="pricing"]').forEach(initPricingSlider);
+}
+
+// Запуск после загрузки DOM
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAllPricingSliders);
+} else {
+  initAllPricingSliders();
+}
+
+// Поддержка Bootstrap-табов (если используется)
+document.addEventListener('shown.bs.tab', initAllPricingSliders);
 
 // Функция инициализации ВСЕХ слайдеров
 function initAllPricingSliders() {
