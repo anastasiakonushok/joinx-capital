@@ -2,8 +2,6 @@
 .testimonials {
   padding: 60px 0;
 }
-
-
 .testimonial {
   text-align: center;
   position: relative;
@@ -93,4 +91,24 @@
 
 .testimonials__arrow::after {
   display: none;
+}
+
+
+
+.certificate-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.certificate-slide a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-cert-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
