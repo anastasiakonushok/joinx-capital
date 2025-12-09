@@ -44,9 +44,24 @@
 
 .funded__card--info {
   padding: 46px 0px 33px 54px;
+  position: relative;
+}
+.funded__card--info .funded__media {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.funded__card--info .funded__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .funded__card--info .funded__content {
   width: 80%;
+  z-index: 100;
+  position: relative;
 }
 .funded__card--challenge {
   background-position: center center;
