@@ -184,7 +184,7 @@ document.addEventListener( "DOMContentLoaded", () => {
 
   new Swiper( swiperEl, {
     slidesPerView: "auto",
-    slidesPerView: 3.2,
+    // slidesPerView: 3.2,
     spaceBetween: 32,
     coverflowEffect: {
       rotate: 0,
