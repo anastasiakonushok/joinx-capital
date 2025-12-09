@@ -114,3 +114,25 @@
 .nav-tabs {
   border-bottom: none !important;
 }
+
+
+.pricing-slider-wrapper {
+  position: relative;
+  padding-top: 20px;
+}
+
+.pricing-slider-wrapper .swiper {
+  padding: 30px 0 40px;
+}
+
+/* Размер активного слайда */
+.pricing__slider .swiper-slide {
+  transition: transform .35s ease, opacity .35s ease;
+  transform: scale(.9);
+  opacity: .6;
+}
+
+.pricing__slider .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
