@@ -78,3 +78,14 @@
     background: linear-gradient(180deg, #caf080 0%, #93b848 100%) !important;
     color: #171717 !important;
 }
+
+
+.contact-buttons__item svg path {
+    transition: 0.3s ease;
+    stroke: currentColor; /* ← ключевой момент */
+}
+
+/* WhatsApp по умолчанию — иконка чёрная */
+.contact-buttons__item--whatsapp svg path {
+    color: #171717;
+}
