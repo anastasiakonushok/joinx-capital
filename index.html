@@ -630,264 +630,266 @@
                     Which evaluation fits you best?
                 </p>
                 <!-- Tabs -->
-                <ul class="pricing__tabs nav nav-tabs justify-content-center mb-4" id="pricingTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="pricing__tab-btn nav-link active" id="tab-btn-1" data-bs-toggle="tab"
-                            data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1"
-                            aria-selected="true">1 Step</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="pricing__tab-btn nav-link" id="tab-btn-2" data-bs-toggle="tab"
-                            data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2"
-                            aria-selected="false">2 Steps</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="pricing__tab-btn nav-link" id="tab-btn-3" data-bs-toggle="tab"
-                            data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3"
-                            aria-selected="false">Special Offers</button>
-                    </li>
-                </ul>
+                <div class="pricing__tabs-wrapper">
+                    <ul class="pricing__tabs nav nav-tabs justify-content-center " id="pricingTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="pricing__tab-btn nav-link active" id="tab-btn-1" data-bs-toggle="tab"
+                                data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1"
+                                aria-selected="true">1 Step</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="pricing__tab-btn nav-link" id="tab-btn-2" data-bs-toggle="tab"
+                                data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2"
+                                aria-selected="false">2 Steps</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="pricing__tab-btn nav-link" id="tab-btn-3" data-bs-toggle="tab"
+                                data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3"
+                                aria-selected="false">Special Offers</button>
+                        </li>
+                    </ul>
 
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <!-- 1 Step -->
-                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-btn-1">
-                        <div class="swiper pricing__slider" data-slider="pricing">
-                            <div class="swiper-wrapper">
-                                <div class="pricing__slide swiper-slide">
-                                    <div class="product-card card shadow-sm">
-                                        <!-- IMAGE -->
-                                        <div class="product-card__image position-relative">
-                                            <img src="./img/crad-product.png" class="card-img-top" alt="Best Offer">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <!-- 1 Step -->
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-btn-1">
+                            <div class="swiper pricing__slider" data-slider="pricing">
+                                <div class="swiper-wrapper">
+                                    <div class="pricing__slide swiper-slide">
+                                        <div class="product-card card shadow-sm">
+                                            <!-- IMAGE -->
+                                            <div class="product-card__image position-relative">
+                                                <img src="./img/crad-product.png" class="card-img-top" alt="Best Offer">
 
-                                            <span class="product-card__badge badge bg-light text-dark fw-semibold">
-                                                Best Offer
-                                            </span>
-                                        </div>
-                                        <!-- BODY -->
-                                        <div class="card-body product-card__body">
-
-                                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                                <h3 class="product-card__price m-0">$299</h3>
-
-                                                <p class="product-card__tagline text-end m-0">
-                                                    Spend $299<br>to trade with $50k
-                                                </p>
+                                                <span class="product-card__badge badge bg-light text-dark fw-semibold">
+                                                    Best Offer
+                                                </span>
                                             </div>
+                                            <!-- BODY -->
+                                            <div class="card-body product-card__body">
 
-                                            <ul class="list-unstyled product-card__list mb-4">
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Step 1 Profit Target</span><strong>5%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Step 2 Profit Target</span><strong>8%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Max Drawdown</span><strong>-10%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Spread</span><strong>Platinum</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Daily Drawdown</span><strong>-6.5%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Reward Split</span><strong>80%</strong>
-                                                </li>
-                                            </ul>
+                                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                                    <h3 class="product-card__price m-0">$299</h3>
 
-                                            <a href="#" class="btn w-100 product-card__btn">
-                                                See details
-                                            </a>
+                                                    <p class="product-card__tagline text-end m-0">
+                                                        Spend $299<br>to trade with $50k
+                                                    </p>
+                                                </div>
+
+                                                <ul class="list-unstyled product-card__list mb-4">
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Step 1 Profit Target</span><strong>5%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Step 2 Profit Target</span><strong>8%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Max Drawdown</span><strong>-10%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Spread</span><strong>Platinum</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Daily Drawdown</span><strong>-6.5%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Reward Split</span><strong>80%</strong>
+                                                    </li>
+                                                </ul>
+
+                                                <a href="#" class="btn w-100 product-card__btn">
+                                                    See details
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing__slide swiper-slide">
+                                        <div class="product-card card shadow-sm">
+                                            <!-- IMAGE -->
+                                            <div class="product-card__image position-relative">
+                                                <img src="./img/crad-product.png" class="card-img-top" alt="Best Offer">
+
+                                                <span class="product-card__badge badge bg-light text-dark fw-semibold">
+                                                    Best Offer
+                                                </span>
+                                            </div>
+                                            <!-- BODY -->
+                                            <div class="card-body product-card__body">
+
+                                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                                    <h3 class="product-card__price m-0">$299</h3>
+
+                                                    <p class="product-card__tagline text-end m-0">
+                                                        Spend $299<br>to trade with $50k
+                                                    </p>
+                                                </div>
+
+                                                <ul class="list-unstyled product-card__list mb-4">
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Step 1 Profit Target</span><strong>5%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Step 2 Profit Target</span><strong>8%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Max Drawdown</span><strong>-10%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Spread</span><strong>Platinum</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Daily Drawdown</span><strong>-6.5%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Reward Split</span><strong>80%</strong>
+                                                    </li>
+                                                </ul>
+
+                                                <a href="#" class="btn w-100 product-card__btn">
+                                                    See details
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing__slide swiper-slide">
+                                        <div class="product-card card shadow-sm">
+                                            <!-- IMAGE -->
+                                            <div class="product-card__image position-relative">
+                                                <img src="./img/crad-product.png" class="card-img-top" alt="Best Offer">
+
+                                                <span class="product-card__badge badge bg-light text-dark fw-semibold">
+                                                    Best Offer
+                                                </span>
+                                            </div>
+                                            <!-- BODY -->
+                                            <div class="card-body product-card__body">
+
+                                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                                    <h3 class="product-card__price m-0">$299</h3>
+
+                                                    <p class="product-card__tagline text-end m-0">
+                                                        Spend $299<br>to trade with $50k
+                                                    </p>
+                                                </div>
+
+                                                <ul class="list-unstyled product-card__list mb-4">
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Step 1 Profit Target</span><strong>5%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Step 2 Profit Target</span><strong>8%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Max Drawdown</span><strong>-10%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Spread</span><strong>Platinum</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Daily Drawdown</span><strong>-6.5%</strong>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between">
+                                                        <span>Reward Split</span><strong>80%</strong>
+                                                    </li>
+                                                </ul>
+
+                                                <a href="#" class="btn w-100 product-card__btn">
+                                                    See details
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="pricing__slide swiper-slide">
-                                    <div class="product-card card shadow-sm">
-                                        <!-- IMAGE -->
-                                        <div class="product-card__image position-relative">
-                                            <img src="./img/crad-product.png" class="card-img-top" alt="Best Offer">
-
-                                            <span class="product-card__badge badge bg-light text-dark fw-semibold">
-                                                Best Offer
-                                            </span>
-                                        </div>
-                                        <!-- BODY -->
-                                        <div class="card-body product-card__body">
-
-                                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                                <h3 class="product-card__price m-0">$299</h3>
-
-                                                <p class="product-card__tagline text-end m-0">
-                                                    Spend $299<br>to trade with $50k
-                                                </p>
-                                            </div>
-
-                                            <ul class="list-unstyled product-card__list mb-4">
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Step 1 Profit Target</span><strong>5%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Step 2 Profit Target</span><strong>8%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Max Drawdown</span><strong>-10%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Spread</span><strong>Platinum</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Daily Drawdown</span><strong>-6.5%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Reward Split</span><strong>80%</strong>
-                                                </li>
-                                            </ul>
-
-                                            <a href="#" class="btn w-100 product-card__btn">
-                                                See details
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pricing__slide swiper-slide">
-                                    <div class="product-card card shadow-sm">
-                                        <!-- IMAGE -->
-                                        <div class="product-card__image position-relative">
-                                            <img src="./img/crad-product.png" class="card-img-top" alt="Best Offer">
-
-                                            <span class="product-card__badge badge bg-light text-dark fw-semibold">
-                                                Best Offer
-                                            </span>
-                                        </div>
-                                        <!-- BODY -->
-                                        <div class="card-body product-card__body">
-
-                                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                                <h3 class="product-card__price m-0">$299</h3>
-
-                                                <p class="product-card__tagline text-end m-0">
-                                                    Spend $299<br>to trade with $50k
-                                                </p>
-                                            </div>
-
-                                            <ul class="list-unstyled product-card__list mb-4">
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Step 1 Profit Target</span><strong>5%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Step 2 Profit Target</span><strong>8%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Max Drawdown</span><strong>-10%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Spread</span><strong>Platinum</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Daily Drawdown</span><strong>-6.5%</strong>
-                                                </li>
-                                                <li class="d-flex justify-content-between">
-                                                    <span>Reward Split</span><strong>80%</strong>
-                                                </li>
-                                            </ul>
-
-                                            <a href="#" class="btn w-100 product-card__btn">
-                                                See details
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
-                    </div>
 
-                    <!-- 2 Steps -->
-                    <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-btn-2">
-                        <div class="swiper pricing__slider" data-slider="pricing">
-                            <div class="swiper-wrapper">
-                                <div class="pricing__slide swiper-slide">
-                                    <article class="pricing__card">
-                                        <header class="pricing__card-head">
-                                            <h3 class="pricing__card-title">Account $25k</h3>
-                                            <div class="pricing__price">$169</div>
-                                        </header>
-                                        <ul class="pricing__features">
-                                            <li class="pricing__feature">Step 2 Profit Target — 8%</li>
-                                            <li class="pricing__feature">Max Drawdown — 6%</li>
-                                            <li class="pricing__feature">Reward Split — 80%</li>
-                                        </ul>
-                                        <a href="#" class="btn btn--primary w-100">See details</a>
-                                    </article>
+                        <!-- 2 Steps -->
+                        <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-btn-2">
+                            <div class="swiper pricing__slider" data-slider="pricing">
+                                <div class="swiper-wrapper">
+                                    <div class="pricing__slide swiper-slide">
+                                        <article class="pricing__card">
+                                            <header class="pricing__card-head">
+                                                <h3 class="pricing__card-title">Account $25k</h3>
+                                                <div class="pricing__price">$169</div>
+                                            </header>
+                                            <ul class="pricing__features">
+                                                <li class="pricing__feature">Step 2 Profit Target — 8%</li>
+                                                <li class="pricing__feature">Max Drawdown — 6%</li>
+                                                <li class="pricing__feature">Reward Split — 80%</li>
+                                            </ul>
+                                            <a href="#" class="btn btn--primary w-100">See details</a>
+                                        </article>
+                                    </div>
+                                    <div class="pricing__slide swiper-slide">
+                                        <article class="pricing__card">
+                                            <header class="pricing__card-head">
+                                                <h3 class="pricing__card-title">Account $50k</h3>
+                                                <div class="pricing__price">$329</div>
+                                            </header>
+                                            <ul class="pricing__features">
+                                                <li class="pricing__feature">Step 2 Profit Target — 8%</li>
+                                                <li class="pricing__feature">Max Drawdown — 6%</li>
+                                                <li class="pricing__feature">Reward Split — 80%</li>
+                                            </ul>
+                                            <a href="#" class="btn btn--primary w-100">See details</a>
+                                        </article>
+                                    </div>
+                                    <div class="pricing__slide swiper-slide">
+                                        <article class="pricing__card">
+                                            <header class="pricing__card-head">
+                                                <h3 class="pricing__card-title">Account $100k</h3>
+                                                <div class="pricing__price">$599</div>
+                                            </header>
+                                            <ul class="pricing__features">
+                                                <li class="pricing__feature">Step 2 Profit Target — 8%</li>
+                                                <li class="pricing__feature">Max Drawdown — 8%</li>
+                                                <li class="pricing__feature">Reward Split — 80%</li>
+                                            </ul>
+                                            <a href="#" class="btn btn--primary w-100">See details</a>
+                                        </article>
+                                    </div>
                                 </div>
-                                <div class="pricing__slide swiper-slide">
-                                    <article class="pricing__card">
-                                        <header class="pricing__card-head">
-                                            <h3 class="pricing__card-title">Account $50k</h3>
-                                            <div class="pricing__price">$329</div>
-                                        </header>
-                                        <ul class="pricing__features">
-                                            <li class="pricing__feature">Step 2 Profit Target — 8%</li>
-                                            <li class="pricing__feature">Max Drawdown — 6%</li>
-                                            <li class="pricing__feature">Reward Split — 80%</li>
-                                        </ul>
-                                        <a href="#" class="btn btn--primary w-100">See details</a>
-                                    </article>
-                                </div>
-                                <div class="pricing__slide swiper-slide">
-                                    <article class="pricing__card">
-                                        <header class="pricing__card-head">
-                                            <h3 class="pricing__card-title">Account $100k</h3>
-                                            <div class="pricing__price">$599</div>
-                                        </header>
-                                        <ul class="pricing__features">
-                                            <li class="pricing__feature">Step 2 Profit Target — 8%</li>
-                                            <li class="pricing__feature">Max Drawdown — 8%</li>
-                                            <li class="pricing__feature">Reward Split — 80%</li>
-                                        </ul>
-                                        <a href="#" class="btn btn--primary w-100">See details</a>
-                                    </article>
-                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
-                    </div>
 
-                    <!-- Special Offers -->
-                    <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-btn-3">
-                        <div class="swiper pricing__slider" data-slider="pricing">
-                            <div class="swiper-wrapper">
-                                <div class="pricing__slide swiper-slide">
-                                    <article class="pricing__card">
-                                        <header class="pricing__card-head">
-                                            <h3 class="pricing__card-title">Free Challenge</h3>
-                                            <div class="pricing__price">FREE</div>
-                                        </header>
-                                        <ul class="pricing__features">
-                                            <li class="pricing__feature">Risk‑free practice</li>
-                                            <li class="pricing__feature">Realistic rules</li>
-                                            <li class="pricing__feature">Get fast‑tracked</li>
-                                        </ul>
-                                        <a href="#" class="btn btn--outline w-100">Start now</a>
-                                    </article>
+                        <!-- Special Offers -->
+                        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-btn-3">
+                            <div class="swiper pricing__slider" data-slider="pricing">
+                                <div class="swiper-wrapper">
+                                    <div class="pricing__slide swiper-slide">
+                                        <article class="pricing__card">
+                                            <header class="pricing__card-head">
+                                                <h3 class="pricing__card-title">Free Challenge</h3>
+                                                <div class="pricing__price">FREE</div>
+                                            </header>
+                                            <ul class="pricing__features">
+                                                <li class="pricing__feature">Risk‑free practice</li>
+                                                <li class="pricing__feature">Realistic rules</li>
+                                                <li class="pricing__feature">Get fast‑tracked</li>
+                                            </ul>
+                                            <a href="#" class="btn btn--outline w-100">Start now</a>
+                                        </article>
+                                    </div>
+                                    <div class="pricing__slide swiper-slide">
+                                        <article class="pricing__card">
+                                            <header class="pricing__card-head">
+                                                <h3 class="pricing__card-title">Best Offer</h3>
+                                                <div class="pricing__price">$299</div>
+                                            </header>
+                                            <ul class="pricing__features">
+                                                <li class="pricing__feature">Bonus payout speed</li>
+                                                <li class="pricing__feature">Priority support</li>
+                                                <li class="pricing__feature">Scaling enabled</li>
+                                            </ul>
+                                            <a href="#" class="btn btn--secondary w-100">See details</a>
+                                        </article>
+                                    </div>
                                 </div>
-                                <div class="pricing__slide swiper-slide">
-                                    <article class="pricing__card">
-                                        <header class="pricing__card-head">
-                                            <h3 class="pricing__card-title">Best Offer</h3>
-                                            <div class="pricing__price">$299</div>
-                                        </header>
-                                        <ul class="pricing__features">
-                                            <li class="pricing__feature">Bonus payout speed</li>
-                                            <li class="pricing__feature">Priority support</li>
-                                            <li class="pricing__feature">Scaling enabled</li>
-                                        </ul>
-                                        <a href="#" class="btn btn--secondary w-100">See details</a>
-                                    </article>
-                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -922,7 +924,8 @@
                             </div>
                             <div class="feature-item__content">
                                 <div class="feature-item__title">Live support team</div>
-                                <div class="feature-item__text">experienced mentorship team and free 1-on-1 sessions</div>
+                                <div class="feature-item__text">experienced mentorship team and free 1-on-1 sessions
+                                </div>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -931,7 +934,8 @@
                             </div>
                             <div class="feature-item__content">
                                 <div class="feature-item__title">Make big market moves</div>
-                                <div class="feature-item__text">experienced mentorship team and free 1-on-1 sessions</div>
+                                <div class="feature-item__text">experienced mentorship team and free 1-on-1 sessions
+                                </div>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -949,7 +953,8 @@
                             </div>
                             <div class="feature-item__content">
                                 <div class="feature-item__title">Live support team</div>
-                                <div class="feature-item__text">experienced mentorship team and free 1-on-1 sessions</div>
+                                <div class="feature-item__text">experienced mentorship team and free 1-on-1 sessions
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1088,10 +1093,11 @@
                 <div class="hero__actions section-cta__actions">
                     <a href="#pricing" class="btn-joinx btn-joinx--primary">Select Evaluation</a>
                     <a href="#" class="btn-joinx btn-joinx--outline">Free Challenge</a>
-                    <p class="section-cta__text">JoinX provides accounts which are on a simulated trading environment only, we do not offer investment
+                    <p class="section-cta__text">JoinX provides accounts which are on a simulated trading environment
+                        only, we do not offer investment
                         services or accept deposits.</p>
                 </div>
-                
+
             </div>
         </section>
     </main>

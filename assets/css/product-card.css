@@ -69,3 +69,48 @@
   opacity: .85;
   color: #000;
 }
+
+
+/* Контейнер табов */
+.pricing__tabs {
+  background: #f3f3f3;
+  padding: 6px 50px;
+  border-radius: 40px;
+  border: none;
+  display: flex;
+  width: fit-content;
+  gap: 10px;
+  margin: 0 auto 20px auto;
+}
+
+/* Убираем Bootstrap бордеры */
+.pricing__tabs .nav-link {
+  border: none !important;
+  border-radius: 90px;
+  letter-spacing: -0.03em;
+  padding: 20px 45px;
+  font-weight:500;
+  font-size: 24px;
+  color: #333!important;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Активный таб — зелёный, как в макете */
+.pricing__tabs .nav-link.active {
+  background: #AAD25A;
+  color: #ffffff!important;
+  border: none!important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Hover на НЕактивных */
+.pricing__tabs .nav-link:not(.active):hover {
+  background: rgba(0, 0, 0, 0.274);
+  color: #fff!important;
+}
+
+/* Убираем стандартный Bootstrap border-bottom */
+.nav-tabs {
+  border-bottom: none !important;
+}
