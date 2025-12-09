@@ -1,50 +1,88 @@
 /* Funded three-card layout (BEM, mobile-first) */
-:root{
-  --funded-green:#DDF0C4;
-  --funded-dark:#101114;
-  --funded-text:#ffffff;
-  --funded-border:#202128;
+:root {
+  --funded-green: #DDF0C4;
+  --funded-dark: #101114;
+  --funded-text: #ffffff;
+  --funded-border: #202128;
 }
+
 .funded-grid {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
 }
+
 .funded__card--challenge {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
 }
 
-.funded__col--left{
-    display: flex;
-    flex-direction: column;
+.funded__col--left {
+  display: flex;
+  flex-direction: column;
 }
 
-.funded__card{
+.funded__card {
   position: relative;
-  display:flex;
-  gap:16px;
-  border-radius:16px;
-  padding:18px;
-  height:100%;
+  display: flex;
+  gap: 16px;
+  border-radius: 16px;
+  height: 100%;
 }
 
 /* Evaluation (top-left) */
-.funded__card--evaluation{
+.funded__card--evaluation {
   background: linear-gradient(135deg, #cfff65 0%, #aad25a 100%), rgba(0, 0, 0, 0.2);
-  color:#0a0a0a;
-  align-items:flex-start;
+  color: #0a0a0a;
+  align-items: flex-start;
+  padding: 46px 33px 30px 0px;
 }
+
+.funded__card--info {
+  padding: 46px 0px 33px 54px;
+}
+.funded__card--challenge {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 65px 67px;
+}
+
+.funded__card--challenge .funded__title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fff;
+}
+
+.funded__card--evaluation .funded__title {
+  font-size: 42px;
+  color: #060606;
+  line-height: 120%;
+  font-weight: var(--font-weight-bold);
+}
+
+.funded__card--info .funded__title {
+  font-size: 42px;
+  color: #fff;
+  line-height: 120%;
+  font-weight: var(--font-weight-bold);
+}
+
 .funded__card--evaluation .funded__media {
   margin-left: -50px;
 }
 
 /* Info (bottom-left) */
-.funded__card--info{
+.funded__card--info {
   background: var(--funded-dark);
   color: var(--funded-text);
-  border:1px solid var(--funded-border);
+  border: 1px solid var(--funded-border);
 }
-.funded__subtitle{ color:#cfd2d9; }
 
+.funded__subtitle {
+  color: #cfd2d9;
+}
