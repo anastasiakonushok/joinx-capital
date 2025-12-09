@@ -94,5 +94,12 @@
         padding: 20px 15px;
         font-size: 18px;
     }
+    .swiper-pagination.custom-pagination {
+        padding: 6px 10px;
+        flex-wrap: wrap;
+    }
+    .pagination-bullet {
+        padding: 5px 10px;
+    }
 }
 

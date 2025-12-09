@@ -20,6 +20,10 @@
   font-family: "Satoshi", sans-serif;
 }
 
+.product-card__body {
+  padding: 30px;
+}
+
 /* IMAGE BLOCK */
 .product-card__image img {
   height: 200px;
@@ -39,15 +43,23 @@
 
 /* PRICE TEXT */
 .product-card__price {
-  font-size: 40px;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #aad25a;
 }
 
 .product-card__tagline {
-  font-size: 14px;
-  color: #d0d0d0;
+  font-weight: 350;
+  font-size: 20px;
+  line-height: 120%;
+  color: #bcbec0;
 }
-
+.product-card__tagline .product-pagin {
+  font-weight: 500;
+color: #d4d4d4;
+}
 /* FEATURES LIST */
 .product-card__list li {
   padding: 6px 0;
@@ -129,12 +141,12 @@
 .pricing__slider .swiper-slide {
   transition: transform .35s ease, opacity .35s ease;
   transform: scale(.9);
-  opacity: .6;
+  filter: brightness(60%);
 }
 
 .pricing__slider .swiper-slide-active {
   transform: scale(1);
-  opacity: 1;
+  filter: brightness(100%);
 }
 
 .pricing__slider .swiper-pagination {
@@ -174,5 +186,5 @@
 
 .pagination-bullet.active {
   background: #686868;
-  color: white!important;
+  color: white !important;
 }
