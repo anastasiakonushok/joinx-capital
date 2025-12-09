@@ -8,8 +8,8 @@
 
 .funded-grid {
   display: grid;
-  grid-template-columns: 50%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows:repeat(2, 1fr);
   gap: 20px;
 }
 
