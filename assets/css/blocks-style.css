@@ -1,6 +1,7 @@
-.section-testimonials h2{
+.section-testimonials h2 {
     font-size: var(--font-size-h2-big);
 }
+
 .section-testimonials .section-subtitle {
     font-weight: 500;
     font-size: 20px;
@@ -10,11 +11,13 @@
     width: 65%;
     margin: 0 auto;
 }
+
 .section-title {
     color: #060606;
     text-align: center;
     font-weight: var(--font-weight-bold);
 }
+
 .features-row {
     justify-content: space-between;
 }
@@ -44,27 +47,31 @@
     line-height: 117%;
     text-align: center;
     color: #000;
-    padding: 0 1em;
     text-align: center;
-    margin: 8px auto;
+    margin: 20px auto;
 }
 
 .feature p {
-    font-size: 16px;
-    color: #6B6B6E;
-    line-height: 1.4;
+    font-size: 21px;
+    line-height: 130%;
+    font-weight: 400;
+    text-align: center;
+    color: #333;
     margin: 0;
 }
+
 .section-steps {
     background: rgba(246, 246, 246, 0.8);
     padding: 270px 0px 90px 0px;
     margin-top: -150px;
 }
+
 .section-steps__title {
     font-size: var(--font-size-h2-extra);
     line-height: 123%;
     letter-spacing: -0.03em;
 }
+
 .cta-section {
     padding: 146px 0px 80px 0px;
 }
