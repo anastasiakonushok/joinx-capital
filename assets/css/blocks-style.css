@@ -43,12 +43,9 @@
 
 .feature-title {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 117%;
-    text-align: center;
-    color: #000;
-    text-align: center;
-    margin: 20px auto;
+    font-size: 20px;
+    line-height: 149%;
+    color: #fff;
 }
 
 .feature p {
@@ -90,5 +87,76 @@
 }
 
 .section-featured {
-    background: linear-gradient(109deg, #0a0909 0%, rgba(40, 39, 39, 0) 60.98%);
+    position: relative;
+    padding: 150px 0;
+
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+
+.features-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 40px;
+    color: #fff;
+    margin-top: 24px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 11px;
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.feature-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #fff
+}
+
+.section-featured {
+    background: linear-gradient(to right, #0e0d0b 0%, #0e0d0b 40%, rgba(14, 13, 11, 0) 100%);
+}
+
+.section-featured h2 {
+    font-size: var(--font-size-h2-big);
+    line-height: 120%;
+    font-weight: var(--font-weight-bold);
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.section-featured .featured-box {
+    display: flex;
+    position: relative;
+}
+
+.section-featured .featured-content {
+    width: 45%;
+    position: relative;
+    z-index: 100;
+}
+
+.section-featured .featured-image {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.section-featured .featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }

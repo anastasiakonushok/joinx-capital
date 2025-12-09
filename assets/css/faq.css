@@ -1,20 +1,67 @@
-.accordion-faq .accordion-button:not(.collapsed){
-    background-color:transparent;
+.accordion-faq {
+    width: 70%;
+    margin: 0 auto;
 }
+
+.accordion-faq .accordion-button:not(.collapsed) {
+    background-color: transparent;
+}
+
 .accordion-faq .accordion-button:focus {
     border-color: transparent;
     box-shadow: none;
 }
-.accordion-faq .accordion-button{
+
+.accordion-faq .accordion-button {
     font-weight: 700;
     font-size: 24px;
     line-height: 150%;
     color: #000;
 }
-.accordion-faq .accordion-body{
-    color:var(--color-black);
+
+.accordion-faq .accordion-body {
+    color: var(--color-black);
 }
+
 .accordion-faq .accordion-item {
-    border:0;
+    border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.contact-buttons {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.contact-buttons__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-buttons__item {
+    min-width: 190px;
+    border-radius: 16px;
+    padding: 25px 20px;
+    background: #131313;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 72%;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-faq h2 {
+    font-size: var(--font-size-h2-big);
+}
+
+.section-faq .section-faq__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 86%;
+    text-align: center;
+    color: #232323;
+    margin-bottom: 70px;
 }

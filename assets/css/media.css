@@ -54,5 +54,9 @@
     .funded__card--challenge {
         padding: 43px 30px;
     }
+    .features-box {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 }
 
