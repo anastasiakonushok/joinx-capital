@@ -29,6 +29,10 @@
   border-radius: 16px;
   height: 100%;
 }
+.funded__content-inner {
+  display: flex;
+  gap: 16px;
+}
 
 /* Evaluation (top-left) */
 .funded__card--evaluation {
@@ -40,6 +44,9 @@
 
 .funded__card--info {
   padding: 46px 0px 33px 54px;
+}
+.funded__card--info .funded__content {
+  width: 80%;
 }
 .funded__card--challenge {
   background-position: center center;
