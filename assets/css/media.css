@@ -5,6 +5,7 @@
     .section-testimonials .section-subtitle {
         width: 100%;
     }
+    
     .funded-grid {
         grid-template-columns: 100%;
         grid-template-rows: repeat(3, 1fr);

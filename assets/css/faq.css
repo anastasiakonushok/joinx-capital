@@ -1,6 +1,10 @@
 .accordion-faq .accordion-button:not(.collapsed){
     background-color:transparent;
 }
+.accordion-faq .accordion-button:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
 .accordion-faq .accordion-button{
     font-weight: 700;
     font-size: 24px;
