@@ -4,7 +4,7 @@
 
 .section-testimonials .section-subtitle {
     font-weight: 500;
-    font-size: 20px;
+    font-size: var(--font-size-20);
     line-height: 119%;
     text-align: center;
     color: #060606;
@@ -83,7 +83,7 @@
     line-height: 130%;
     font-weight: var(--font-weight-bold);
     color: #fff;
-    margin-bottom: 40;
+    margin-bottom: 40px;
 }
 
 .section-cta__actions {
@@ -107,7 +107,7 @@
 
 .section-pricing .section-subtitle {
     font-weight: 500;
-    font-size: 32px;
+    font-size: var(--font-size-32);
     line-height: 150%;
     letter-spacing: -0.03em;
     text-align: center;

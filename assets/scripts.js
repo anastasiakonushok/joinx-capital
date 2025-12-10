@@ -271,3 +271,86 @@ document.addEventListener('shown.bs.tab', () => {
 
 
 
+(function () {
+  // Только для Windows
+  if (!/Win/.test(navigator.platform)) return;
+
+  // Проверим, поддерживается ли Unicode-режим в регулярках
+  try {
+      new RegExp('.', 'u');
+  } catch (e) {
+      return; // Если нет — выходим (очень старый браузер)
+  }
+
+  // Unicode-диапазон региональных индикаторов: U+1F1E6 to U+1F1FF
+  const flagRegex = new RegExp(/([\u{1F1E6}-\u{1F1FF}]{2})/gu);
+
+  function emojiToOpenMojiName(emoji) {
+      const codes = Array.from(emoji, c => c.codePointAt(0).toString(16).toUpperCase().padStart(4, '0'));
+      return codes.join('-');
+  }
+
+  function replaceFlagsInNode(node) {
+      const text = node.nodeValue;
+      if (!flagRegex.test(text)) return;
+
+      const parent = node.parentNode;
+      const fragment = document.createDocumentFragment();
+      const parts = text.split(flagRegex);
+
+      for (let i = 0; i < parts.length; i++) {
+          if (!parts[i]) continue;
+
+          if (flagRegex.test(parts[i])) {
+              const mojiName = emojiToOpenMojiName(parts[i]);
+              const img = document.createElement('img');
+              img.src = `https://cdn.jsdelivr.net/npm/openmoji@14.0.0/color/svg/${mojiName}.svg`;
+              img.alt = parts[i];
+              img.style.height = '1em';
+              img.style.verticalAlign = 'text-bottom';
+              img.setAttribute('aria-label', `Flag ${parts[i]}`);
+              fragment.appendChild(img);
+          } else {
+              fragment.appendChild(document.createTextNode(parts[i]));
+          }
+      }
+
+      parent.replaceChild(fragment, node);
+  }
+
+  function processAllTextNodes() {
+      const walker = document.createTreeWalker(
+          document.body,
+          NodeFilter.SHOW_TEXT,
+          {
+              acceptNode: function (node) {
+                  const parentTag = node.parentElement?.tagName;
+                  if (parentTag === 'SCRIPT' || parentTag === 'STYLE') {
+                      return NodeFilter.FILTER_REJECT;
+                  }
+                  return flagRegex.test(node.nodeValue)
+                      ? NodeFilter.FILTER_ACCEPT
+                      : NodeFilter.FILTER_REJECT;
+              }
+          },
+          false
+      );
+
+      const nodes = [];
+      let node;
+      while ((node = walker.nextNode())) {
+          nodes.push(node);
+      }
+
+      // Обрабатываем в обратном порядке, чтобы избежать смещения при замене
+      for (let i = nodes.length - 1; i >= 0; i--) {
+          replaceFlagsInNode(nodes[i]);
+      }
+  }
+
+  if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', processAllTextNodes);
+  } else {
+      processAllTextNodes();
+  }
+})();

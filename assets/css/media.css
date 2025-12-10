@@ -2,82 +2,112 @@
     .btn-joinx {
         width: 100%;
     }
+
     .section-testimonials .section-subtitle {
         width: 100%;
     }
-    
+
     .funded-grid {
         grid-template-columns: 100%;
         grid-template-rows: repeat(3, 1fr);
     }
+
     .funded__card--challenge {
         grid-column: 1;
-        grid-row:  3 / 3;
+        grid-row: 3 / 3;
     }
+
     .feature-title {
         font-size: 18px;
     }
+
     .feature p {
         font-size: 14px;
     }
+
     .funded__card--evaluation .funded__content-inner {
         flex-direction: column;
         align-items: center;
     }
+
     .funded__card--evaluation .funded__media {
         margin-left: 0px;
         margin-top: -50px;
     }
+
     .funded__card--evaluation .funded__media img {
         width: 137px;
         height: 137px;
     }
+
     .funded__card .funded__content {
         text-align: center;
         width: 100%;
     }
+
     .funded__card--info {
         padding: 43px 30px;
     }
+
     .funded__card--evaluation {
         padding: 0px 30px 43px 30px;
     }
+
     .funded__card--evaluation .funded__title {
         font-size: 32px;
+        text-align: center;
     }
+
     .funded__card--info .funded__title {
         font-size: 32px;
     }
+
     .funded__card--challenge .funded__title {
         font-size: 40px;
     }
+
     .funded__card--challenge {
         padding: 43px 30px;
     }
+
     .features-box {
         grid-template-columns: 1fr;
         gap: 16px;
     }
+
     .section-featured .featured-content {
         width: 100%;
     }
+
     .section-featured {
         padding: 0px 0px 20px 0px;
         display: flex;
         flex-direction: column-reverse;
         background: #0B0A0A;
     }
-    /* .section-featured .featured-image {
-        position: relative;
+
+    .section-featured__content {
+        padding: 20px 0px;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .section-featured__video {
         width: 100%;
-    } */
+    }
+
+    .section-featured .section-featured__block {
+        width: 100%;
+    }
+
     .section-featured .featured-content {
         padding: 20px 0px;
     }
+
     .accordion-faq {
         width: 100%;
     }
-    
+
     .contact-buttons {
         width: 100%;
         margin-top: 50px;
@@ -89,21 +119,41 @@
     }
 
     .contact-buttons__item {
-        flex: 0 0 calc(50% - 20px); /* две кнопки в ряд */
+        flex: 0 0 calc(50% - 20px);
+        /* две кнопки в ряд */
         min-width: calc(50% - 20px);
         padding: 20px 15px;
         font-size: 18px;
     }
+
     .swiper-pagination.custom-pagination {
         padding: 6px 10px;
         flex-wrap: wrap;
     }
+
     .pagination-bullet {
         padding: 5px 10px;
     }
+
     .footer__top {
         padding-top: 28px;
         padding-bottom: 28px;
     }
+    .pricing__tabs {
+        padding: 6px 10px;
+    }
+    .pricing__tabs .nav-link {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    /* .swiper-pagination.custom-pagination {
+        width: 100%;
+    } */
+    .pricing__slider .pagination-bullet {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .section-cta__actions {
+        width: 100%;
+    }
 }
-

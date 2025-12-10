@@ -38,7 +38,7 @@
 
 .footer__nav-group {
     display: grid;
-    gap: 10px;
+    gap: 20px;
 }
 
 .footer__nav-title {
@@ -97,4 +97,11 @@
 .footer__disclaimer-text {
     text-align: center;
 }
-
+.footer__nav-list--social {
+    gap: 15px;
+}
+.footer__nav-list--social li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
