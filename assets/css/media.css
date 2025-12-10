@@ -67,10 +67,10 @@
         flex-direction: column-reverse;
         background: #0B0A0A;
     }
-    .section-featured .featured-image {
+    /* .section-featured .featured-image {
         position: relative;
         width: 100%;
-    }
+    } */
     .section-featured .featured-content {
         padding: 20px 0px;
     }
@@ -100,6 +100,10 @@
     }
     .pagination-bullet {
         padding: 5px 10px;
+    }
+    .footer__top {
+        padding-top: 28px;
+        padding-bottom: 28px;
     }
 }
 
